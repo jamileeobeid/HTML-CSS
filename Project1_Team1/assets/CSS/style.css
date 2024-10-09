@@ -13,7 +13,7 @@ body{
     position: sticky;
     top: 0;
     /*coloring the text and the background*/
-    background-color: rgb(138, 209, 211);
+    background-color: rgb(124, 189, 192);
     color: darkblue;
     height: 150px;
     display: flex;
