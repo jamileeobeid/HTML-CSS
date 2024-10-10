@@ -185,7 +185,7 @@ in 'ABOUT US' navigator*/
     background-color: rgba(211, 211, 211, 0.766);
     padding: 20px;
     margin: 10px;
-    height: 450px;
+    height: 470px;
     /*customizing the inner box:*/
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -216,6 +216,7 @@ in 'ABOUT US' navigator*/
     text-decoration: underline;
 }
 
+/*The following 'place' class will style the content pages*/
 .place{
     align-items: center;
     border: 5px solid cadetblue;
@@ -233,7 +234,7 @@ body{
     font-size: 20px;
 }
 
-
+/*used in content pages*/
 .place_description{
     width: 70%;
 }
@@ -244,6 +245,7 @@ body{
     clear: both;
 }
 
+/*used in content pages to style images and ensure position*/
 .place .img{
     width:30%;
     margin-left: 10px;
