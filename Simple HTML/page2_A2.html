@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 2, Page 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100vw;
+            border: 2px solid #c8e6c9; 
+        }
+
+        .header {
+            height: 10%;
+            background-color: #e8f5e9;
+            border: 1px solid #a5d6a7;
+            color:#286c2c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bolder;
+            line-height: 15vh;
+        }
+
+        .pages {
+            background-color: #d0f0c0; 
+            border: 1px solid #b2dfdb; 
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            width: 80%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav a {
+            color: #286c2c;
+            text-decoration: none;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-content {
+            display: flex;
+            flex: 1;
+        }
+
+        .nav {
+            width: 20%;
+            border: 1px solid #c8e6c9; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            background-color: #f1f8e9; 
+        }
+
+        .contact-icon {
+        width: 35px;
+        height: auto;
+        }
+
+
+        .main {
+            width: 60%;
+            border: 1px solid #a5d6a7; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            font-family: 'Arial', sans-serif;
+            background-color: #e8f5e9; 
+        }
+
+        .footer {
+            height: 15%;
+            width: 100%;
+            background-color: #e8f5e9; 
+            border: 1px solid #a5d6a7; 
+            color: #286c2c;
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bolder;
+            text-align: center;
+            line-height: 15vh;
+        }
+
+        .aside {
+            width: 20%;
+            color:#286c2c;
+            border: 1px solid #c8e6c9;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f1f8e9; 
+        }
+
+        .news-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            align-items: center;
+        }
+
+        .news {
+            background-color: #d0f0c0; 
+            border: 1px solid #b2dfdb; 
+            width: 90%;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .news h4 {
+            color: #388E3C;
+            margin-bottom: 5px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+            border: 3px solid #388E3C;
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+
+        .text-section {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 10px; 
+            padding: 15px; 
+            margin: 5px 0; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+
+        .text-section h3 {
+            font-size: 24px;
+            color: #388E3C; 
+            margin-bottom: 10px;
+        }
+
+        .text-section p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Lebanon News: Highlights of Baalbek</div>
+        <div class="main-content">
+            <div class="nav">
+                <div class="pages"><a href="index_A2.html">Home</a></div>
+                <div class="pages"><a href="page2_A2.html">Baalbek</a></div>
+                <div class="pages"><a href="page3_A2.html">Lebanese Cuisine</a></div>
+            
+                
+            <div class="contact" style="margin-top: 20px; text-align: center; line-height: 140%;">
+                <h3 style="color: #1a4b1d; font-size: 18px;">Contact Me</h3>
+                <p style="display: inline; color: #286c2c;">Reach out via:</p><br>
+                <div style="display: inline-flex; align-items: center; gap: 8px; margin-top: 5px;">
+                    <a href="https://www.linkedin.com/in/jamil%C3%A9-obeid-31843b285/">
+                        <img src="LinkedIn_logo.png" alt="LinkedIn" class="contact-icon">
+                    </a>
+                    <a href="mailto:jamile.m.obeid@gmail.com">
+                        <img src="gmail.png" alt="Gmail" class="contact-icon">
+                    </a>
+                </div>
+        </div>
+
+
+        </div>
+            
+            <div class="main">
+                <div class="text-section">
+                    <h3>Baalbek</h3>
+                    <p>This Phoenician city, where a triad of deities was worshipped, was known as Heliopolis during the Hellenistic period. It retained its religious function during Roman times, when the sanctuary of the Heliopolitan Jupiter attracted thousands of pilgrims. Baalbek, with its colossal structures, is one of the finest examples of Imperial Roman architecture at its apogee.</p>
+                    <p>Baalbek became one of the most celebrated sanctuaries of the ancient world, progressively overlaid with colossal constructions which were built during more than two centuries. Its monumental ensemble is one of the most impressive testimonies of the Roman architecture of the imperial period.</p>
+                </div>
+                <div class="image-container">
+                    <div class="text-section">
+                        <p>Some curious facts about the Baalbek temple are that you will see stone lotuses carved on the temple’s ceilings. That is intriguing because there are no lotuses in Lebanon. But when I later came to India, I saw that the lotus is the most common symbolism of spirituality here. I haven’t seen an Indian temple without one. Secondly, the foundation stones of the temple are supposed to weigh eight hundred tonnes each. The ancients transported these immense stones, and also erected huge columns, which are at least 10 feet in diameter and 50 feet high. It is said that they were moved with the help of elephants, but people don’t give much credence to this as there are no elephants in West Asia.</p>
+                    </div>
+                    <img src="baalbek.jpeg" alt="Baalbek">
+                    <img src="baalbek2.jpeg" alt="Baalbek View">
+                </div>
+                <div class="footer">&copy; 2024 by Jamile Obeid</div>
+            </div>
+            <div class="aside">
+                <h2>Baalbek: Fascinating Facts<br><br></h2>
+                <div class="news-container">
+                    <div class="news">
+                        <h4>Temple of Bacchus</h4>
+                        <p>One of the best-preserved Roman temples, the Temple of Bacchus is famous for its grand architecture.</p>
+                    </div>
+                    <div class="news">
+                        <h4>Festival of Baalbek</h4>
+                        <p>This annual event celebrates music, culture, and the arts, bringing thousands to the site.</p>
+                    </div>
+                    <div class="news">
+                        <h4>Roman Ruins</h4>
+                        <p>Baalbek’s Roman ruins are some of the most important in the Middle East, offering a glimpse into ancient civilization.</p>
+                    </div>
+                    <div class="news">
+                        <h4>UNESCO</h4>
+                        <p>Recognized for its historical significance, Baalbek has been a UNESCO World Heritage Site since 1984.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
