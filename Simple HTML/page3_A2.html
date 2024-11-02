@@ -1,1 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lebanese Food</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8f0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        header {
+            background-color: #c70000;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 10px;
+            overflow: auto; /* Allow scrolling if needed */
+        }
+        h2 {
+            margin: 20px 0;
+            color: #c70000;
+        }
+        .dish-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 20px;
+        }
+        .dish {
+            margin: 10px;
+            flex: 1 1 calc(25% - 20px);
+            max-width: 200px;
+        }
+        .dish img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .description {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-left: 20px;
+            max-width: 600px; 
+            text-align: left;
+            flex: 1;
+            line-height: 1.3;
+        }
+        .contact {
+            background-color: #ffebee;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .contact h3 {
+            color: #c70000;
+            margin-bottom: 10px;
+        }
+        .contact a img {
+            width: 30px;
+            margin: 5px;
+        }
+        footer {
+            background-color: #c70000;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto;
+        }
 
+        @media (max-width: 768px) {
+            .dish {
+                flex: 1 1 calc(50% - 20px);
+            }
+            .description {
+                max-width: 100%;
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lebanese Cuisine</h1>
+        <nav>
+            <a href="index_A2.html">Home</a>
+            <a href="page2_A2.html">Baalbek</a>
+            <a href="page3_A2.html">Lebanese Food</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="dish-container">
+            <div class="dish">
+                <img src="babaghanoush.jpeg" alt="Baba Ghanouj">
+                <h3>Baba Ghanouj</h3>
+            </div>
+            <div class="dish">
+                <img src="tabbouleh.jpeg" alt="Tabbouleh">
+                <h3>Tabbouleh</h3>
+            </div>
+            <div class="dish">
+                <img src="sfeeha.jpeg" alt="Sfeeha">
+                <h3>Sfeeha</h3>
+            </div>
+            <div class="dish">
+                <img src="falafel.jpeg" alt="Falafel">
+                <h3>Falafel</h3>
+            </div>
+        </div>
+        <div class="description">
+            <h2>About Lebanese Cuisine</h2>
+            <p>Lebanese cuisine is known for its abundance of whole grains, fresh vegetables, and flavorful dishes. An important component of many Lebanese meals is hummus, a chickpea puree dish, and many dishes are eaten with flatbread. A plate of veggies with tomatoes, cucumber, mint, olives, and pickles is always served on the table, along with a plate of fruits at the end of the meal with a Lebanese coffee. Well-known desserts include baklawa, sfouf, and ka'ak. Some desserts are specifically prepared on special occasions; for example, meghli (rice pudding dessert, spiced with anise, caraway, and cinnamon) is served to celebrate a newborn baby in the family.</p>
+            <div class="contact">
+                <h3>Contact Me</h3>
+                <p>Feel free to reach out to me via LinkedIn or email:</p>
+                <a href="https://www.linkedin.com/in/jamil%C3%A9-obeid-31843b285/"><img src="LinkedIn_logo.png" alt="LinkedIn"></a>
+                <a href="mailto:jamile.m.obeid@gmail.com"><img src="gmail.png" alt="Gmail"></a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 by Jamile Obeid. All rights reserved.</p>
+    </footer>
+</body>
+</html>
