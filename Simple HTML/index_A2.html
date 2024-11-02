@@ -1,1 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 2, Page 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        .header, .navigation, .footer {
+            width: 100%;
+            float: left;
+            text-align: center;
+            border: 1px solid #ffffff;
+        }
+
+        .header {
+            height: 15vh;
+            background-color: #c70000; 
+            color: white;
+            font-size: 2em;
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+            display: inline-block;
+            text-align: center;
+            padding: 30px 0;
+            gap: 15px;
+        }
+        
+        .header img {
+            vertical-align: middle;
+            height: 60px;
+        }
+
+        .navigation {
+            height: 10vh;
+            background-color: #990000; 
+        }
+
+        .pages {
+            width: 33.33%;
+            float: left;
+            height: 100%;
+            border: 1px solid #ffffff;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            background-color: #111010;
+            color: #ffffff;
+            line-height: 10vh;
+            text-align: center;
+        }
+
+        .main {
+            width: 100%;
+            height: 60vh;
+            float: left;
+            background-color: #c70000;
+            padding: 20px 0;
+        }
+
+        .aside {
+            width: 25%;
+            float: left;
+            padding: 20px;
+            border: 1px solid #ffffff;
+            background-color: #f5e6e8; 
+            color: #333333; 
+            font-family: 'Arial', sans-serif;
+            border-radius: 8px;
+            line-height: 1.7;
+            height: 100%;
+        }
+        
+        .content {
+            width: 73%;
+            float: left;
+            padding: 20px;
+            border: 1px solid #ffffff;
+            font-family: 'Arial', sans-serif;
+            background-color: #f5e6e8; 
+            color: #333333;
+            border-radius: 8px;
+            line-height: 1.4;
+            height: 100%;
+            margin-left: 2%;
+        }
+
+        .contact {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0efeb;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            float: right; 
+            width: auto;
+            gap: 10px;
+        }
+
+        .footer {
+            height: 15vh;
+            clear: both;
+            background-color: #c70000;
+            color: white;
+            font-size: 1em;
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        
+        a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+        
+        h3 {
+            color: #ba3232;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="icon.jpeg" alt="Logo">
+        LEBANON
+    </div>
+    <div class="navigation">
+        <div class="pages"><a href="index_A2.html">Home</a></div>
+        <div class="pages"><a href="page2_A2.html">Baalbek</a></div>
+        <div class="pages"><a href="page3_A2.html">Lebanese Cuisine</a></div>
+    </div>
+    <div class="main">
+        <div class="aside">
+            <h3>Learning Objectives</h3><br>
+            <ul>
+                <li>To develop a multi-section webpage layout using HTML and CSS</li>
+                <li>To practice structuring and styling float and flex containers</li>
+                <li>To understand the use of Float and Flexbox for layout design.</li>
+                <li>To demonstrate creative ideas in web design.</li>
+                <li>To create a functional navigation bar.</li>
+                <li>To practice uploading HTML codes on FileZilla.</li>
+            </ul>
+        </div>
+        
+        <div class="content">
+            <h3>Welcome to my website!</h3><br>
+            <p>
+                I have created this website to fulfill the requirement for my second homework for the ISTE140 course.
+                In the navigation bar, you will see three different pages. The first page, <b>Home</b>, is this page, created using float only. The second page, <b>Baalbek</b>, was made using flexbox only. The third page, <b>Lebanese Cuisine</b>, showcases my creative ideas!
+            </p><br>
+            <p>
+                The <b>Home</b> webpage is designed using float only. On the otherhand, <b>Baalbek</b> is designed using flex. Finally, <b>Lebanese Cuisine</b> is designed using my creative ideas. I have incorporated multiple usages of 'flex' in this page. 
+            </p><br>
+            <p>
+                I hope you enjoy my webpages!
+            </p>
+            <div class="contact">
+                <p>Contact Me via LinkedIn or Email:</p>
+                <a href="https://www.linkedin.com/in/jamil%C3%A9-obeid-31843b285/">
+                    <img src="LinkedIn_logo.png" alt="LinkedIn" width="30">
+                </a>
+                <a href="mailto:jamile.m.obeid@gmail.com">
+                    <img src="gmail.png" alt="Gmail" width="30">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2024 by Jamile Obeid
+    </div>
+</body>
+</html>
