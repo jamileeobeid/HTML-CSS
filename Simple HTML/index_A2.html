@@ -10,55 +10,68 @@
             box-sizing: border-box;
         }
 
+        body {
+            background-color: #c70000;
+            font-family: Arial, sans-serif;
+        }
+
         .header, .navigation, .footer {
             width: 100%;
             float: left;
             text-align: center;
-            border: 1px solid #ffffff;
         }
 
         .header {
-            height: 15vh;
-            background-color: #c70000; 
+            background-color: #c70000;
             color: white;
             font-size: 2em;
             font-family: 'Georgia', serif;
             font-weight: bold;
-            display: inline-block;
-            text-align: center;
             padding: 30px 0;
-            gap: 15px;
-        }
-        
-        .header img {
-            vertical-align: middle;
-            height: 60px;
+            text-align: left;
+            align-items: center;
+            justify-content: center;
+            margin-left: 6%;
         }
 
+
         .navigation {
-            height: 10vh;
             background-color: #990000; 
+        }
+
+        .main {
+            width: 100%;
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+
+        .footer {
+            background-color: #c70000;
+            color: white;
+            font-size: 1em;
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px 0;
+            float: left;
         }
 
         .pages {
             width: 33.33%;
             float: left;
-            height: 100%;
-            border: 1px solid #ffffff;
             font-family: 'Arial', sans-serif;
             font-weight: bold;
-            background-color: #111010;
-            color: #ffffff;
+            background-color: #887e7e;
+            color: black;
             line-height: 10vh;
             text-align: center;
         }
 
-        .main {
-            width: 100%;
-            height: 60vh;
+        .wrapped-image {
             float: left;
-            background-color: #c70000;
-            padding: 20px 0;
+            width: 200px;
+            margin: 0 15px 10px 0; 
+            border-radius: 8px;
         }
 
         .aside {
@@ -69,58 +82,44 @@
             background-color: #f5e6e8; 
             color: #333333; 
             font-family: 'Arial', sans-serif;
+            font-size: 17px;
             border-radius: 8px;
-            line-height: 1.7;
-            height: 100%;
+            line-height: 2;
         }
         
         .content {
             width: 73%;
             float: left;
-            padding: 20px;
+            padding: 19px;
             border: 1px solid #ffffff;
             font-family: 'Arial', sans-serif;
+            font-size: 20px;
             background-color: #f5e6e8; 
             color: #333333;
             border-radius: 8px;
             line-height: 1.4;
-            height: 100%;
             margin-left: 2%;
         }
 
         .contact {
-            margin-top: 20px;
+            background-color: #ffebee;
             padding: 15px;
-            background-color: #f0efeb;
             border-radius: 8px;
+            margin-top: 20px;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            float: right; 
-            width: auto;
-            gap: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .footer {
-            height: 15vh;
-            clear: both;
-            background-color: #c70000;
-            color: white;
-            font-size: 1em;
-            font-family: 'Georgia', serif;
-            font-weight: bold;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .contact h3 {
+            color: #c70000;
+            margin-bottom: 10px;
         }
 
-        
+        .contact a img {
+            width: 30px;
+            margin: 5px;
+        }
+
         a {
             text-decoration: none;
             color: #ffffff;
@@ -137,7 +136,6 @@
 </head>
 <body>
     <div class="header">
-        <img src="icon.jpeg" alt="Logo">
         LEBANON
     </div>
     <div class="navigation">
@@ -155,30 +153,52 @@
                 <li>To demonstrate creative ideas in web design.</li>
                 <li>To create a functional navigation bar.</li>
                 <li>To practice uploading HTML codes on FileZilla.</li>
+                <li>To optimize image usage and placement on the webpage</li>
+                <li>To apply styling techniques for text, images, and links</li>
+                <li>To incorporate a consistent color scheme and typography</li>
             </ul>
+            <br><br><br>
+            <div class="contact">
+                <h3>Contact Me</h3>
+                <p>Feel free to reach out to me via LinkedIn or email:</p>
+                <a href="https://www.linkedin.com/in/jamil%C3%A9-obeid-31843b285/"><img src="LinkedIn_logo.png" alt="LinkedIn"></a>
+                <a href="mailto:jamile.m.obeid@gmail.com"><img src="gmail.png" alt="Gmail"></a>
+            </div>
         </div>
         
         <div class="content">
-            <h3>Welcome to my website!</h3><br>
+            <img src="view.jpg" alt="View Image" class="wrapped-image">
+            <h3>About Lebanon</h3><br>
             <p>
-                I have created this website to fulfill the requirement for my second homework for the ISTE140 course.
-                In the navigation bar, you will see three different pages. The first page, <b>Home</b>, is this page, created using float only. The second page, <b>Baalbek</b>, was made using flexbox only. The third page, <b>Lebanese Cuisine</b>, showcases my creative ideas!
+                Lebanon, country consisting of a narrow strip of territory on the eastern shore of the Mediterranean Sea. 
+                It is one of the world’s smaller sovereign states. The capital is Beirut.
             </p><br>
             <p>
-                The <b>Home</b> webpage is designed using float only. On the otherhand, <b>Baalbek</b> is designed using flex. Finally, <b>Lebanese Cuisine</b> is designed using my creative ideas. I have incorporated multiple usages of 'flex' in this page. 
+                Though Lebanon, particularly its coastal region, was the site of some of the oldest human settlements in the world—the Phoenician 
+                ports of Tyre (modern Ṣūr), Sidon (Ṣaydā), and Byblos (Jubayl) were dominant centers of trade and culture in the 3rd millennium bce—it was 
+                not until 1920 that the contemporary state came into being. In that year France, which was administering 
+                Lebanon as a League of Nations mandate, established the state of Greater Lebanon. Lebanon then became a republic in 1926 and proclaimed its 
+                independence in 1943. 
             </p><br>
+            <img src="view2.jpg" alt="View Image" class="wrapped-image">
+            <h3>Lebanese Culture</h3><br>
             <p>
-                I hope you enjoy my webpages!
-            </p>
-            <div class="contact">
-                <p>Contact Me via LinkedIn or Email:</p>
-                <a href="https://www.linkedin.com/in/jamil%C3%A9-obeid-31843b285/">
-                    <img src="LinkedIn_logo.png" alt="LinkedIn" width="30">
-                </a>
-                <a href="mailto:jamile.m.obeid@gmail.com">
-                    <img src="gmail.png" alt="Gmail" width="30">
-                </a>
-            </div>
+                Lebanon shares many of the cultural characteristics of the Arab world, yet it has attributes that differentiate it from many of its Arab 
+                neighbors. Its rugged, mountainous terrain has served throughout history as an asylum for diverse religious and ethnic groups and for 
+                political dissidents. Lebanon is one of the most densely populated countries in the Mediterranean area and has a high rate of literacy.
+                 Notwithstanding its meager natural resources, Lebanon long managed to serve as a busy commercial and cultural center for the Middle East.
+            </p><br>
+            <img src="view3.jpg" alt="View Image" class="wrapped-image">
+            <h3>Climate of Lebanon</h3><br>
+            <p>
+                There are sharp local contrasts in the country’s climatic conditions. Lebanon is included in the Mediterranean climatic region, 
+                which extends westward to the Atlantic Ocean. Winter storms formed over the ocean move eastward through the Mediterranean, 
+                bringing precipitation at that season; in summer, however, the Mediterranean receives little or no precipitation. The climate of Lebanon 
+                is generally subtropical and is characterized by hot, dry summers and mild, humid winters. Mean daily maximum temperatures range from the low
+                90s F (low 30s C) in July to the low 60s F (mid-10s C) on the coast and low 50s F (low 10s C) in Bekaa in January. Mean minimum temperatures 
+                in January are in the low 50s F on the coast and the mid-30s F (about 2 °C) in Bekaa. At 5,000 feet (1,524 meters), the elevation of the highest
+                settlements, these are reduced by about 15 °F (8 °C).
+            </p><br>
         </div>
     </div>
     <div class="footer">
