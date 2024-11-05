@@ -12,62 +12,85 @@
             color: #333;
             display: flex;
             flex-direction: column;
-            overflow: hidden;
+            overflow: auto;
         }
         header {
-            background-color: #c70000;
+            background-image: url('food.jpg');
+            background-size: contain;
+            background-position: center;
             color: white;
             text-align: center;
             padding: 20px 0;
+            height: 400px;
         }
         nav {
-            margin: 20px 0;
+            margin-bottom: 20px;
+            gap: 20px;
         }
         nav a {
-            color: white;
-            margin: 0 15px;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
             text-decoration: none;
             font-weight: bold;
+            color: black;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #e0e0e0; 
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            height: 50px;
         }
         .container {
-            flex: 1;
             display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 10px;
-            overflow: auto;
+            flex-direction: row;
+            width: 100%;
         }
-        h2 {
-            margin: 20px 0;
+        .sidebar {
+            background-color: #c70000;
+            color: white;
+            width: 30%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .sidebar h3 {
+            margin-top: 0;
+        }
+        .main-content {
+            width: 70%;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.5;
+        }
+        .main-content h2 {
             color: #c70000;
+            margin-top: 0;
         }
         .dish-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            max-width: 800px;
-            margin: 20px;
-        }
-        .dish {
-            margin: 10px;
-            flex: 1 1 calc(25% - 20px);
-            max-width: 200px;
-        }
-        .dish img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .description {
             background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin-left: 20px;
-            max-width: 600px; 
-            text-align: left;
-            flex: 1;
-            line-height: 1.3;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+        }
+        .dish-container img {
+            float: left;
+            margin-right: 15px;
+            width: 150px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .dish-title {
+            color: #c70000;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 5px;
         }
         .contact {
             background-color: #ffebee;
@@ -76,6 +99,7 @@
             margin-top: 20px;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: black;
         }
         .contact h3 {
             color: #c70000;
@@ -90,51 +114,29 @@
             color: white;
             text-align: center;
             padding: 10px 0;
-            margin-top: auto;
-        }
-
-        @media (max-width: 768px) {
-            .dish {
-                flex: 1 1 calc(50% - 20px);
-            }
-            .description {
-                max-width: 100%;
-                margin-left: 0;
-            }
+            width: 100%;
+            position: relative;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Lebanese Cuisine</h1>
-        <nav>
-            <a href="index_A2.html">Home</a>
-            <a href="page2_A2.html">Baalbek</a>
-            <a href="page3_A2.html">Lebanese Food</a>
-        </nav>
-    </header>
+    <header></header>
     <div class="container">
-        <div class="dish-container">
-            <div class="dish">
-                <img src="babaghanoush.jpeg" alt="Baba Ghanouj">
-                <h3>Baba Ghanouj</h3>
-            </div>
-            <div class="dish">
-                <img src="tabbouleh.jpeg" alt="Tabbouleh">
-                <h3>Tabbouleh</h3>
-            </div>
-            <div class="dish">
-                <img src="sfeeha.jpeg" alt="Sfeeha">
-                <h3>Sfeeha</h3>
-            </div>
-            <div class="dish">
-                <img src="falafel.jpeg" alt="Falafel">
-                <h3>Falafel</h3>
-            </div>
-        </div>
-        <div class="description">
-            <h2>About Lebanese Cuisine</h2>
-            <p>Lebanese cuisine is known for its abundance of whole grains, fresh vegetables, and flavorful dishes. An important component of many Lebanese meals is hummus, a chickpea puree dish, and many dishes are eaten with flatbread. A plate of veggies with tomatoes, cucumber, mint, olives, and pickles is always served on the table, along with a plate of fruits at the end of the meal with a Lebanese coffee. Well-known desserts include baklawa, sfouf, and ka'ak. Some desserts are specifically prepared on special occasions; for example, meghli (rice pudding dessert, spiced with anise, caraway, and cinnamon) is served to celebrate a newborn baby in the family.</p>
+        
+        <div class="sidebar">
+            <nav>
+                <a href="index_A2.html">Home</a>
+                <a href="page2_A2.html">Baalbek</a>
+                <a href="page3_A2.html">Lebanese Food</a>
+            </nav>
+
+            <br> <br> 
+
+            <p style="font-size: 18px; line-height: 1.7;">Lebanese cuisine is known for its abundance of whole grains, fresh vegetables, and flavorful dishes. An important component of many Lebanese meals is hummus, a chickpea puree dish, and many dishes are eaten with flatbread. A plate of veggies with tomatoes, cucumber, mint, olives, and pickles is always served on the table, along with a plate of fruits at the end of the meal with a Lebanese coffee.</p>
+            <p style="font-size: 18px; line-height: 1.7;">Well-known desserts include baklawa, sfouf, and ka'ak. Some desserts are specifically prepared on special occasions; for example, meghli (a rice pudding dessert spiced with anise, caraway, and cinnamon) is served to celebrate a newborn baby in the family.</p>
+        
+            <br> <br>  
+            
             <div class="contact">
                 <h3>Contact Me</h3>
                 <p>Feel free to reach out to me via LinkedIn or email:</p>
@@ -142,9 +144,42 @@
                 <a href="mailto:jamile.m.obeid@gmail.com"><img src="gmail.png" alt="Gmail"></a>
             </div>
         </div>
+        
+        <div class="main-content">
+            <h2>About Lebanese Cuisine</h2>
+            <div class="dish-container">
+                <img src="babaghanoush.jpeg" alt="Baba Ghanouj">
+                <p><span class="dish-title">Baba Ghanouj:</span> also known as baba ganouj, muttabal, or salat hatzilim–is a smoky, rich, and creamy eggplant dip, 
+                    traditionally made by mixing tender roasted (or charred) eggplant and nutty tahini with garlic, citrus, and spices. 
+                    Creamy, savory, smoky eggplant dip with tahini, garlic and citrus, this authentic baba ganoush recipe is a must-try!
+                </p>
+            </div>
+            <div class="dish-container">
+                <img src="tabbouleh.jpeg" alt="Tabbouleh">
+                <p><span class="dish-title">Tabbouleh:</span> Tabbouleh (also spelled tabouli) is a super fresh herb and bulgur salad, with parsley being the number one 
+                    ingredient. It’s dotted with diced cucumber and tomato, and dressed simply with olive oil and lemon juice. It’s refreshing, light and 
+                    packed with healthy ingredients.</p>
+            </div>
+            <div class="dish-container">
+                <img src="sfeeha.jpeg" alt="Sfeeha">
+                <p><span class="dish-title">Sfeeha:</span>They are served as part of the Lebanese mezze or as a main dish accompanied with plain yogurt, whether eaten 
+                    as a snack or a main, sfeeha always satisfy and eating them all day long would be great if only my waist would allow it.  Their crispy 
+                    exterior with their steamy soft meat interior take them to the top list of comfort food! You will find sfeeha at all bakeries in Lebanon
+                     – these hand-pies are portable and delicious!</p>
+            </div>
+            <div class="dish-container">
+                <img src="shawarma.jpeg" alt="Shawarma">
+                <p><span class="dish-title">Shawarma:</span> Shawarma (Arabic: شاورما) is a Middle Eastern dish that originated in the Levantine region during
+                     the Ottoman Empire, consisting of meat that is cut into thin slices, stacked in an inverted cone, and roasted on a slow-turning 
+                     vertical spit. Traditionally made with lamb or mutton, it may also be made with chicken, turkey meat, beef, falafel or veal. 
+                     The surface of the rotisserie meat is routinely shaved off once it cooks and is ready to be served. Shawarma is a popular street 
+                     food throughout the Arab world and the Greater Middle East.</p>
+            </div>
+        </div>
     </div>
+
     <footer>
-        <p>&copy; 2024 by Jamile Obeid. All rights reserved.</p>
+        <p>&copy; 2024 Lebanese Food Page</p>
     </footer>
 </body>
 </html>
