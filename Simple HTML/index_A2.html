@@ -6,6 +6,7 @@
 
     <!--this class is dedicated to the home page (using float elements only)-->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style>
         * {
@@ -38,6 +39,7 @@
             align-items: center;
             justify-content: center;
             margin-left: 6%;
+            box-sizing: border-box;
         }
 
         /*adjusting the lebanon flag icon in the header*/
@@ -57,6 +59,7 @@
             width: 100%;
             min-height: 100vh;
             padding: 20px 0;
+            box-sizing: border-box;
         }
 
         /*adding elements for the footer (similar features were used for the header to ensure organization)*/
@@ -69,6 +72,7 @@
             text-align: center;
             padding: 15px 0;
             float: left;
+            box-sizing: border-box;
         }
 
         /*below class adjusts the pages in the navigation bar*/
@@ -81,6 +85,7 @@
             color: black;
             line-height: 10vh;
             text-align: center;
+            box-sizing: border-box;
         }
 
         /*below class is for the images inside the content of the home page*/
@@ -104,6 +109,7 @@
             font-size: 17px;
             border-radius: 8px;
             line-height: 2;
+            box-sizing: border-box;
         }
         
         .content {
@@ -118,6 +124,7 @@
             border-radius: 8px;
             line-height: 1.4;
             margin-left: 2%;
+            box-sizing: border-box;
         }
 
         /*adjusting the contact me box*/
@@ -153,6 +160,37 @@
         ul {
             padding-left: 20px;
         }
+
+        /* creating responsive layout for smaller screens */
+        @media (max-width: 768px) {
+
+            .header, .navigation, .footer, .aside, .content {
+                width: 100%;
+                float: none;
+                text-align: center;
+            }
+
+            /*i will stack the navigation pages vertically under each other */
+            .pages {
+                width: 100%;
+                background-color: #990000;
+                color: white;
+            }
+
+            /*putting the main content below the navigation pages*/
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /*adjusting the wrapped images to take the full screen*/
+            .wrapped-image {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+
     </style>
 </head>
 <body>
