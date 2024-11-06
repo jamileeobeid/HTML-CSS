@@ -169,7 +169,7 @@
             margin-bottom: 5px;
         }
 
-        /*below class is for styling the text inside the main column in the middle of the page*/
+        /*the three below classes are for styling the text inside the main column in the middle of the page*/
         .text-section {
             background-color: #D3D3D3;
             border: 1px solid #B22222;
@@ -201,6 +201,57 @@
             border: 3px solid #B22222; 
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* creating responsive layout for smaller screens */
+        @media (max-width: 768px) {
+
+            /*stacking the elements in column direction*/
+            .container {
+                flex-direction: column;
+            }
+
+            /*adjusting the header*/
+            .header {
+                height: auto;
+                font-size: 24px;
+                padding: 10px;
+                text-align: center;
+            }
+
+            /*adjusting the navigation*/
+            .nav {
+                width: 100%;
+                flex-direction: row;
+                flex-wrap: wrap;
+                padding: 10px;
+            }
+
+            /*styling the pages*/
+            .pages {
+                width: auto;
+                flex: 1 1 100%;
+                margin: 5px 0;
+            }
+
+            /*adjusting main content after the pages vertically*/
+            .main-content {
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+            }
+            
+            .main, .aside {
+                width: 90%;
+                margin: 10px 0;
+            }
+
+            .footer {
+                height: auto;
+                font-size: 16px;
+                padding: 15px;
+                line-height: normal;
+            }
         }
     </style>
 </head>
