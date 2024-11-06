@@ -137,6 +137,48 @@
             width: 100%;
             position: relative;
         }
+
+    /* creating responsive layout for smaller screens */
+    @media (max-width: 768px) {
+    
+        /*stacking the elements in column direction*/
+        .container {
+            flex-direction: column;
+        }
+
+        /*adjusting the header*/
+        header {
+            height: 400px;
+            background-size: cover;
+        }
+
+        /*stacking the navigation after the header*/
+        nav {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /*ensuring the sidebar and content take the full width*/
+        .sidebar, .main-content {
+            width: 100%;
+        }
+
+        /*stacking the dish content vertically*/
+        .dish-container {
+            flex-direction: column;
+            text-align: center;
+        }
+        .dish-container img {
+            margin: 0 auto 10px; /*centering the images */
+            width: 100%; 
+        }
+
+        footer {
+            width: 100%;
+        }
+}
+
     </style>
 </head>
 <body>
