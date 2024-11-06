@@ -1,8 +1,12 @@
+<!--DONE BY 
+        JAMILE OBEID-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!--this class is dedicated to the home page (using float elements only)-->
     <meta charset="UTF-8">
-    <title>Homework 2, Page 1</title>
+    <title>Home</title>
     <style>
         * {
             margin: 0;
@@ -15,12 +19,14 @@
             font-family: Arial, sans-serif;
         }
 
+        /*below, i am adjusting the width, alignment, and float for the header, navigation, and footer*/
         .header, .navigation, .footer {
             width: 100%;
             float: left;
             text-align: center;
         }
 
+        /*adjusting the header elements*/
         .header {
             background-color: #c70000;
             color: white;
@@ -34,17 +40,26 @@
             margin-left: 6%;
         }
 
-
-        .navigation {
-            background-color: #990000; 
+        /*adjusting the lebanon flag icon in the header*/
+        .icon {
+            float: right;
+            width: 50px;
+            height: 50px;
+            margin-right: 120px;
         }
 
+        .navigation {
+            background-color: #990000;  /*adding a background color for the navigation bar*/
+        }
+
+        /*below i am adjusting the features for the main content*/
         .main {
             width: 100%;
             min-height: 100vh;
             padding: 20px 0;
         }
 
+        /*adding elements for the footer (similar features were used for the header to ensure organization)*/
         .footer {
             background-color: #c70000;
             color: white;
@@ -56,6 +71,7 @@
             float: left;
         }
 
+        /*below class adjusts the pages in the navigation bar*/
         .pages {
             width: 33.33%;
             float: left;
@@ -67,6 +83,8 @@
             text-align: center;
         }
 
+        /*below class is for the images inside the content of the home page*/
+        /*i am wrapping the images beside the text*/
         .wrapped-image {
             float: left;
             width: 200px;
@@ -74,6 +92,7 @@
             border-radius: 8px;
         }
 
+        /*adjusting the elements in the aside column (learning objectives)*/
         .aside {
             width: 25%;
             float: left;
@@ -101,6 +120,7 @@
             margin-left: 2%;
         }
 
+        /*adjusting the contact me box*/
         .contact {
             background-color: #ffebee;
             padding: 15px;
@@ -129,6 +149,7 @@
             color: #ba3232;
         }
 
+        /*adjusting the bullets under the learning objectives*/
         ul {
             padding-left: 20px;
         }
@@ -137,6 +158,7 @@
 <body>
     <div class="header">
         LEBANON
+        <img src="icon.jpeg" alt="Icon" class="icon">
     </div>
     <div class="navigation">
         <div class="pages"><a href="index_A2.html">Home</a></div>
@@ -202,7 +224,7 @@
         </div>
     </div>
     <div class="footer">
-        &copy; 2024 by Jamile Obeid
+        &copy; 2024 Jamile Obeid. All rights reserved.
     </div>
 </body>
 </html>
