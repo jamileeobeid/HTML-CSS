@@ -25,10 +25,10 @@
 
 /*styling for the title on the left center side of the image */
 .title {
-    position: absolute;
+    position: absolute; /*absolutely positioned to layer it over the background image*/
     top: 50%;
     left: 5%;
-    transform: translateY(-50%); /* Vertically center */
+    top: 40%;
     color: white;
     font-size: 3.5em;
     font-weight: bold;
@@ -36,10 +36,10 @@
 }
 
 nav {
-    position: absolute;
+    position: absolute; /*absolutely positioned to layer it over the background image*/
     top: 50%;
     right: 5%;
-    margin-top: -1.5em;
+    top: 28%;
     background-color: rgba(240, 240, 240, 0.8);
     padding: 20px;
     border-radius: 5px;
