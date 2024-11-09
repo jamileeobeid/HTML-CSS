@@ -1,5 +1,64 @@
 /*
-    CSS SHEET FOR ISTE 140 PROJECT 2
+    CSS SHEET FOR ISTE 140 PROJECT 1
     JAMILE LEEN DINGMUKHAMMED 
-
 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/*THE BELOW CODES ARE DEDICATED FOR THE HOME PAGE (index.html)*/
+
+
+.image-container {
+    position: relative; /* positioning the title and nav on top of the image */
+}
+
+.full-width-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*styling for the title on the left center side of the image */
+.title {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%); /* Vertically center */
+    color: white;
+    font-size: 3.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /*adding shadow for the text*/
+}
+
+nav {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    margin-top: -1.5em;
+    background-color: rgba(240, 240, 240, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /*adding shadow for the navigation container*/
+}
+
+nav ul {
+    list-style-type: none; /*removing bullet points from the pages in the navigator*/
+}
+
+nav ul li {
+    margin: 10px 0; /*adding space between the pages in the navigator*/
+}
+
+/*styling the pages in the navigator*/
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 2;
+}
