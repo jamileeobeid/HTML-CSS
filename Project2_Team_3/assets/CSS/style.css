@@ -127,3 +127,10 @@ in the main content with the class"history-image"*/
     margin-bottom: 20px;
     float: right; /*allowing text to wrap around the image */
 }
+
+.sidebar-content{
+    display: sticky;
+}
+.right{
+    float:right;
+}
