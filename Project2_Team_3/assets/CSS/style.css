@@ -26,9 +26,8 @@
 /*styling for the title on the left center side of the image */
 .title {
     position: absolute; /*absolutely positioned to layer it over the background image*/
-    top: 50%;
-    left: 5%;
     top: 45%;
+    left: 5%;
     color: white;
     font-size: 3.5em;
     font-weight: bold;
@@ -37,9 +36,8 @@
 
 nav {
     position: absolute; /*absolutely positioned to layer it over the background image*/
-    top: 50%;
-    right: 5%;
     top: 28%;
+    right: 5%;
     background-color: rgba(240, 240, 240, 0.8);
     padding: 20px;
     border-radius: 5px;
@@ -54,7 +52,7 @@ nav ul li {
     margin: 10px 0; /*adding space between the pages in the navigator*/
 }
 
-/*styling the pages in the navigator*/
+/* Styling the navigation links */
 nav ul li a {
     text-decoration: none;
     color: black;
@@ -63,14 +61,13 @@ nav ul li a {
     line-height: 2;
 }
 
-/*styling the layout of the main content and the sidebar*/
+/* Styling the sidebar */
 .content-container {
     display: flex;
     margin: 40px 5%;
     justify-content: space-between; /*adding space between the sidebar and main content*/
 }
 
-/*styling the sidebar*/
 .sidebar {
     width: 25%;
     padding: 20px;
@@ -80,20 +77,32 @@ nav ul li a {
     margin-right: 2%;
     flex-shrink: 0; /*preventing sidebar from shrinking*/
 }
+
 .sidebar h2 {
     font-size: 1.5em;
     margin-bottom: 12px;
-    color: black;
+    color: #006400; /* Dark green for a professional, cohesive look */
+    border-bottom: 2px solid #b5e7a0; /* Light green underline for a refined touch */
+    padding-bottom: 5px;
 }
+
 .sidebar ul li {
     margin-bottom: 10px;
     margin-left: 4px;
     line-height: 1.6;
     font-size: 1.2em;
-    color: #070707;
+    color: #333; /* Dark grey text for a cleaner look */
+    padding: 5px;
+    border-left: 3px solid #b5e7a0; /* Light green border on the left for subtle emphasis */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/*Styling the main content*/
+.sidebar ul li:hover {
+    background-color: #f0f8f5;
+    color: #006400;
+}
+
+/* Styling the main content */
 .main-content {
     display: block;
     margin-bottom: 20px;
@@ -105,20 +114,22 @@ nav ul li a {
     width: 100%;
     margin-bottom: 10px;
 }
+
 .main-content p {
     font-size: 1.2em;
     color: #070707;
     margin-bottom: 20px;
     line-height: 1.6;
 }
+
 .history-image {
     width: 32%;
     height: 35%;
     border-radius: 8px; /*making the image corners rounded*/
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
-/*in the below class, the styling will be added to the image
-in the main content with the class"history-image"*/
+
+/* Styling images within main content */
 .main-content img.history-image {
     width: 25%;
     height: 35%;
@@ -129,14 +140,73 @@ in the main content with the class"history-image"*/
     float: right; /*allowing text to wrap around the image */
 }
 
-.sidebar-content{
-    display: sticky;
-}
-.right{
-    float:right;
+/* Clear floats after main content */
+.main-content::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-.main-content #brazil, #ethiopia , #germany , #jordan, #kazakhstan, #spain {
+/* Sidebar content specific styles */
+.sidebar-content {
+    position: sticky;
+    top: 20px; /* Adjust as needed */
+}
+
+.sidebar-content h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #023002;
+}
+
+.sidebar-content a {
+    display: block;
+    padding: 10px;
+    color: #006400;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    background-color: rgba(240, 240, 240, 0.8);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar-content a:hover {
+    background-color: rgba(144, 238, 144, 0.6);
+    transform: scale(1.05); /*this will make the option bigger when user hover over it*/
+}
+
+/* Main content for Popular Dishes */
+.main-content div[id] {
+    background-color: #f7fff7;
+    padding: 20px;
+    border-left: 5px solid #006400;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+/* Display targeted country section */
+.main-content div[id]:target {
+    display: block;
+}
+
+/* Styling for country headings */
+.main-content h3 {
+    font-size: 1.8em;
+    color: black;
+    margin-bottom: 10px;
+}
+
+/*styling for paragraphs inside country sections */
+.main-content #brazil, 
+.main-content #ethiopia, 
+.main-content #germany, 
+.main-content #jordan, 
+.main-content #kazakhstan, 
+.main-content #spain {
     display: none;
     font-size: 1.2em;
     color: #070707;
@@ -144,7 +214,29 @@ in the main content with the class"history-image"*/
     line-height: 1.6;
 }
 
-#brazil:target, #ethiopia:target, #germany:target, #jordan:target, #kazakhstan:target, #spain:target{
-    display:block;
+#brazil:target, 
+#ethiopia:target, 
+#germany:target, 
+#jordan:target, 
+#kazakhstan:target, 
+#spain:target {
+    display: block;
 }
 
+/*styling the default map image (beside "Popular Dishes of Every Country") */
+.main-content #default {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+/*adjusting the image*/
+.default-image {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+/*hiding the default image when any country is targeted */
+.main-content div[id]:target ~ #default {
+    display: none;
+}
