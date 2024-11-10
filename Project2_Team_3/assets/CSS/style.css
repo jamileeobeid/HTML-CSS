@@ -1,136 +1,113 @@
-/*
-    CSS SHEET FOR ISTE 140 PROJECT 2
+<!--
+    INDEX PAGE
     JAMILE LEEN DINGMUKHAMMED 
-*/
+-->
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring World Cuisines</title>
+    <link rel="stylesheet" href="assets/CSS/style.css">
+</head>
+<body>
+    <section class="image-container">
+        <h1 class="title">Exploring World Cuisines</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="japan.html">Japan</a></li>
+                <li><a href="italy.html">Italy</a></li>
+                <li><a href="india.html">India</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
+        <img src="assets/media/food.jpg" alt="Food" class="full-width-image">
+    </section>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+    <div class="content-container">
+        <!-- SIDEBAR SECTION -->
+        <aside class="sidebar">
+            <h2>Did You Know?</h2>
+            <ul>
+                <li>Lasagna originated in Greece, despite Italy frequently receiving all the credit.</li>
+                <li>The world's largest producer, consumer, and exporter of chili peppers is India.</li>
+                <li>Chocolate was used as currency in Ancient Mexico.</li>
+                <li>France invented mayonnaise, but it went global after Spain made it famous!</li>
+            </ul>
+        </aside>
 
-/*THE BELOW CODES ARE DEDICATED FOR THE HOME PAGE (index.html)*/
+        <!-- MAIN CONTENT SECTION -->
+        <section class="main-content">
 
+            <h2>The History of Cuisine</h2>
+            <p>
+                <img src="assets/media/cuisine.png" alt="Ancient Roman Cuisine" class="history-image">
+                The Roman Empire had a fully developed imperial cuisine that drew on foods from all over the known world. Scores of Roman food preparations
+                were passed down in the ancient cookbook colloquially known as Apicius, one of the earliest cookbooks in recorded history. 
+                The book was named after the famous Roman merchant and epicurer <strong><i>Marcus Gavius Apicius</i></strong>. Although the Romans used fish 
+                sauce in almost everything, modern Italian recipes do not call for it. Along with cumin and coriander, the Romans also made great use of the herb 
+                lovage. These flavors are uncommon in modern Italian cooking, much like garum. In contrast, Apicius makes only one reference to basil, a common 
+                seasoning in modern Italian cooking. Laserpitium was one of the most sought-after Roman seasonings. The Romans devoured the plant until it was extinct. 
+            </p>
+        </section>
+    </div>
+    <div class = 'content-container'>
+        <aside class="sidebar sidebar-content">
+            <h2>Popular Dishes of every country</h2>
+            <a href="#brazil">Brazil</a>
+            <a href="#ethiopia">Ethiopia</a>
+            <a href="#germany">Germany</a>
+            <a href="#jordan">Jordan</a>
+            <a href="#kazakhstan">Kazakhstan</a>
+            <a href="#spain">Spain</a>
+        </aside>
+        <section class="main-content">
 
-.image-container {
-    position: relative; /* positioning the title and nav on top of the image */
-}
+            <div id="brazil">
+                <h3>Brazil: Feijoada</h3>
+                <img src="assets/media/cuisine.png" alt="Ancient Roman Cuisine" class="history-image">
+                <p>Black beans and pork pieces, including organ meats, are used to make Brazil's rich, 
+                    filling feijoada.The well-liked meal does represent the demands of people who could 
+                    only afford less expensive, harder cuts of meat that require tenderization by stewing.</p>
+            </div>
+            <div id="ethiopia">
+                <h3>Ethiopia: Doro wat</h3>
+                <img src="assets/media/cuisine.png" alt="Ancient Roman Cuisine" class="history-image">
+                <p>Berbere, a spice blend of coriander, cumin, cardamom, chiles, cloves, fenugreek, 
+                    cinnamon, ginger, turmeric, nutmeg, and allspice, is used to flavor doro wat, 
+                    Ethiopia's signature dish, which is a stew of chicken and eggs.</p>
+            </div>
+            <div id="germany">
+                <h3>Germany: Sauerbraten</h3>
+                <img src="assets/media/cuisine.png" alt="Ancient Roman Cuisine" class="history-image">
+                <p>Roasted beef, veal, or venison marinated for several days in vinegar, wine, vegetables,
+                     and other spices to tenderize the meat is known as sauerbraten in Germany.</p>
+            </div>
+            <div id="jordan">
+                <h3>Jordan: Mansaf</h3>
+                <img src="assets/media/cuisine.png" alt="Ancient Roman Cuisine" class="history-image">
+                <p>Traditional Jordanian mansaf is made with rice and meat cooked in a fermented dried yogurt sauce.
+                    The Bedouins were nomadic people who first used lamb or camel meat.It is offered at weddings, 
+                    funerals, religious holidays, and other events.</p>
+            </div>
+            <div id="kazakhstan">
+                <h3>Kazakhstan: Beshbarmak</h3>
+                <img src="assets/media/cuisine.png" alt="Ancient Roman Cuisine" class="history-image">
+                <p>Kazakhstani beshbarmak is a cooked meat and noodle dish that is typically made with horse or mutton 
+                    but can also be made with beef or lamb. Traditionally, it is served on a transparent 
+                    cloth spread on the floor or on a huge plate on a Darsakstan, a low table.</p>
+            </div>
+            <div id="spain">
+                <h3>Spain: Paella</h3>
+                <img src="assets/media/cuisine.png" alt="Ancient Roman Cuisine" class="history-image">
+                <p>Paelle is laden with rice, seafood or meat, and flavored with saffron. It is traditionally 
+                    cooked over an open fire in a shallow, flat-bottomed pan to take best advantage of quick,
+                    hot flames in a land that lacks forests of slow-burning firewood.</p>
+            </div>
 
-.full-width-image {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/*styling for the title on the left center side of the image */
-.title {
-    position: absolute; /*absolutely positioned to layer it over the background image*/
-    top: 50%;
-    left: 5%;
-    top: 45%;
-    color: white;
-    font-size: 3.5em;
-    font-weight: bold;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 2); /*adding shadow for the text*/
-}
-
-nav {
-    position: absolute; /*absolutely positioned to layer it over the background image*/
-    top: 50%;
-    right: 5%;
-    top: 28%;
-    background-color: rgba(240, 240, 240, 0.8);
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /*adding shadow for the navigation container*/
-}
-
-nav ul {
-    list-style-type: none; /*removing bullet points from the pages in the navigator*/
-}
-
-nav ul li {
-    margin: 10px 0; /*adding space between the pages in the navigator*/
-}
-
-/*styling the pages in the navigator*/
-nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 1.5em;
-    line-height: 2;
-}
-
-/*styling the layout of the main content and the sidebar*/
-.content-container {
-    display: flex;
-    margin: 40px 5%;
-    justify-content: space-between; /*adding space between the sidebar and main content*/
-}
-
-/*styling the sidebar*/
-.sidebar {
-    width: 25%;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-right: 2%;
-    flex-shrink: 0; /*preventing sidebar from shrinking*/
-}
-.sidebar h2 {
-    font-size: 1.5em;
-    margin-bottom: 12px;
-    color: black;
-}
-.sidebar ul li {
-    margin-bottom: 10px;
-    margin-left: 4px;
-    line-height: 1.6;
-    font-size: 1.2em;
-    color: #070707;
-}
-
-/*Styling the main content*/
-.main-content {
-    display: block;
-    margin-bottom: 20px;
-}
-.main-content h2 {
-    font-size: 2em;
-    color: black;
-    width: 100%;
-    margin-bottom: 10px;
-}
-.main-content p {
-    font-size: 1.2em;
-    color: #070707;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-.history-image {
-    width: 32%;
-    height: 35%;
-    border-radius: 8px; /*making the image corners rounded*/
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-/*in the below class, the styling will be added to the image
-in the main content with the class"history-image"*/
-.main-content img.history-image {
-    width: 25%;
-    height: 35%;
-    border-radius: 8px; /*making the image corners rounded*/
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    margin-right: 20px;
-    margin-bottom: 20px;
-    float: right; /*allowing text to wrap around the image */
-}
-
-.sidebar-content{
-    display: sticky;
-}
-.right{
-    float:right;
-}
+        </section>
+    </div>
+</body>
+</html>
