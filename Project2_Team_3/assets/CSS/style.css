@@ -28,7 +28,7 @@
     position: absolute; /*absolutely positioned to layer it over the background image*/
     top: 50%;
     left: 5%;
-    top: 42%;
+    top: 45%;
     color: white;
     font-size: 3.5em;
     font-weight: bold;
@@ -57,8 +57,73 @@ nav ul li {
 /*styling the pages in the navigator*/
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: black;
     font-weight: bold;
     font-size: 1.5em;
     line-height: 2;
+}
+
+/*styling the layout of the main content and the sidebar*/
+.content-container {
+    display: flex;
+    margin: 40px 5%;
+    justify-content: space-between; /*adding space between the sidebar and main content*/
+}
+
+/*styling the sidebar*/
+.sidebar {
+    width: 25%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 2%;
+    flex-shrink: 0; /*preventing sidebar from shrinking*/
+}
+.sidebar h2 {
+    font-size: 1.5em;
+    margin-bottom: 12px;
+    color: black;
+}
+.sidebar ul li {
+    margin-bottom: 10px;
+    margin-left: 4px;
+    line-height: 1.6;
+    font-size: 1.2em;
+    color: #070707;
+}
+
+/*Styling the main content*/
+.main-content {
+    display: block;
+    margin-bottom: 20px;
+}
+.main-content h2 {
+    font-size: 2em;
+    color: black;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.main-content p {
+    font-size: 1.2em;
+    color: #070707;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+.history-image {
+    width: 32%;
+    height: 35%;
+    border-radius: 8px; /*making the image corners rounded*/
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+/*in the below class, the styling will be added to the image
+in the main content with the class"history-image"*/
+.main-content img.history-image {
+    width: 25%;
+    height: 35%;
+    border-radius: 8px; /*making the image corners rounded*/
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    float: right; /*allowing text to wrap around the image */
 }
