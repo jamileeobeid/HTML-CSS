@@ -32,7 +32,7 @@
     color: white;
     font-size: 3.5em;
     font-weight: bold;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /*adding shadow for the text*/
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 1.5); /*adding shadow for the text*/
 }
 
 nav {
@@ -43,7 +43,7 @@ nav {
     background-color: rgba(240, 240, 240, 0.8);
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /*adding shadow for the navigation container*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /*adding shadow for the navigation container*/
 }
 
 nav ul {
