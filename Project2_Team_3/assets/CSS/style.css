@@ -280,6 +280,7 @@ body {
     padding: 10px;
     flex-wrap:  wrap;
     justify-content: left;
+    margin-right: 205px;
 }
 /*each individual Country Section Styling */
 .country-section {
