@@ -186,6 +186,7 @@ nav ul li a {
     margin: 20px 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     display: none;
+    clear: both;  /*ensuring content below clears previous floated elements*/
 }
 
 /* Display targeted country section */
@@ -239,4 +240,90 @@ nav ul li a {
 /*hiding the default image when any country is targeted */
 .main-content div[id]:target ~ #default {
     display: none;
+}
+
+/*BELOW CODES ARE FOR COUNTRIES & INGREDIENTS*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Introductory Section Styling */
+.intro {
+    text-align: center;
+    background-color: #e0f7fa;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.intro h1 {
+    color: #00796b;
+    margin: 0;
+}
+.intro p {
+    color: #004d40;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+/*country Container Styling */
+.country-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+/*each individual Country Section Styling */
+.country-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    margin: 15px 0;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.country-header {
+    display: flex;
+    align-items: center;
+}
+.country-header img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+.country-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+/*ingredient List Styling */
+.ingredient-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /*adding spaces around the lists*/
+    margin-top: 20px;
+}
+.ingredient {
+    text-align: center;
+    width: 100px;
+    margin: 10px;
+}
+.ingredient img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+}
+.ingredient p {
+    margin: 5px 0;
+}
+.percentage {
+    color: #666;
+    font-size: 0.9em;
 }
