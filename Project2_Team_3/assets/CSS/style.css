@@ -81,8 +81,8 @@ nav ul li a {
 .sidebar h2 {
     font-size: 1.5em;
     margin-bottom: 12px;
-    color: #006400; /* Dark green for a professional, cohesive look */
-    border-bottom: 2px solid #b5e7a0; /* Light green underline for a refined touch */
+    color: #006400;
+    border-bottom: 2px solid #b5e7a0; /*underline for a refined touch */
     padding-bottom: 5px;
 }
 
@@ -91,9 +91,9 @@ nav ul li a {
     margin-left: 4px;
     line-height: 1.6;
     font-size: 1.2em;
-    color: #333; /* Dark grey text for a cleaner look */
+    color: #333;
     padding: 5px;
-    border-left: 3px solid #b5e7a0; /* Light green border on the left for subtle emphasis */
+    border-left: 3px solid #b5e7a0;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -102,7 +102,7 @@ nav ul li a {
     color: #006400;
 }
 
-/* Styling the main content */
+/*styling the main content */
 .main-content {
     display: block;
     margin-bottom: 20px;
@@ -129,7 +129,7 @@ nav ul li a {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Styling images within main content */
+/*styling images within main content */
 .main-content img.history-image {
     width: 25%;
     height: 35%;
@@ -140,17 +140,15 @@ nav ul li a {
     float: right; /*allowing text to wrap around the image */
 }
 
-/* Clear floats after main content */
+/*clearing floats after main content */
 .main-content::after {
     content: "";
     display: table;
     clear: both;
 }
-
-/* Sidebar content specific styles */
 .sidebar-content {
     position: sticky;
-    top: 20px; /* Adjust as needed */
+    top: 20px;
 }
 
 .sidebar-content h2 {
@@ -201,7 +199,7 @@ nav ul li a {
     margin-bottom: 10px;
 }
 
-/*styling for paragraphs inside country sections */
+/*styling for paragraphs inside country sections */ 
 .main-content #brazil, 
 .main-content #ethiopia, 
 .main-content #germany, 
@@ -237,7 +235,7 @@ nav ul li a {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
-/*hiding the default image when any country is targeted */
+/*ensuring any targeted country will hide Brazil */
 .main-content div[id]:target ~ #default {
     display: none;
 }
@@ -245,7 +243,7 @@ nav ul li a {
 /*BELOW CODES ARE FOR COUNTRIES & INGREDIENTS*/
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #f3f9f6;
     margin: 0;
     padding: 0;
     display: flex;
@@ -255,13 +253,13 @@ body {
 /* Introductory Section Styling */
 .intro {
     text-align: center;
-    background-color: #e0f7fa;
+    background-color: #e3f2fd;
     padding: 20px;
     width: 100%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .intro h1 {
-    color: #00796b;
+    color: #01579b;
     margin: 0;
 }
 .intro p {
@@ -275,55 +273,74 @@ body {
     max-width: 1200px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    align-items: left;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 /*each individual Country Section Styling */
 .country-section {
     display: flex;
     flex-direction: column;
+    flex: 1 1 45%; /* allows each section to take up nearly half the width */
     align-items: center;
     background-color: #fff;
-    margin: 15px 0;
+    margin: 10px 0;
     padding: 20px;
-    width: 100%;
+    width: 61%;
+    box-sizing: border-box;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
 }
 .country-header {
     display: flex;
     align-items: center;
 }
 .country-header img {
-    width: 40px;
+    width: 45px;
     height: auto;
     margin-right: 10px;
 }
 .country-name {
     font-size: 1.5em;
     font-weight: bold;
-    color: #333;
+    color: black;
 }
 /*ingredient List Styling */
 .ingredient-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /*adding spaces around the lists*/
+    justify-content: space-around; /*adding spaces between the lists*/
     margin-top: 20px;
+    gap: 10px;
 }
 .ingredient {
+    padding: 10px;
+    border-radius: 8px;
     text-align: center;
     width: 100px;
-    margin: 10px;
+    margin: 0 auto;
 }
 .ingredient img {
     width: 80px;
     height: 80px;
-    border-radius: 8px;
+    border-radius: 50px;
 }
 .ingredient p {
     margin: 5px 0;
+    font-weight: bolder;
+    color: #000000;
 }
-.percentage {
-    color: #666;
+p.percentage {
+    color: #616161;
     font-size: 0.9em;
+}
+.country-container > h2 {
+    width: 50%; /*adjusts the width of the underline to fit better*/
+    position: relative;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #033b03; 
+    border-bottom: 2px solid #b5e7a0;
 }
