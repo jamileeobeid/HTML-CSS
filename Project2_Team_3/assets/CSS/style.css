@@ -77,6 +77,10 @@ nav ul li a {
     margin-right: 2%;
     flex-shrink: 0; /*preventing sidebar from shrinking*/
 }
+.sidebar-left{
+    margin-left: 2%;
+    margin-right: 0;
+}
 
 .sidebar h2 {
     font-size: 1.5em;
@@ -269,25 +273,24 @@ body {
 }
 /*country Container Styling */
 .country-container {
-    width: 100%;
-    max-width: 1200px;
+    width: 75%;
     display: flex;
     flex-direction: column;
     align-items: left;
     padding: 10px;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-wrap:  wrap;
+    justify-content: left;
 }
 /*each individual Country Section Styling */
 .country-section {
     display: flex;
     flex-direction: column;
-    flex: 1 1 45%; /* allows each section to take up nearly half the width */
+    flex: 1; /* allows each section to take up nearly half the width */
     align-items: center;
     background-color: #fff;
     margin: 10px 0;
     padding: 20px;
-    width: 61%;
+    width: 100%;
     box-sizing: border-box;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -337,7 +340,6 @@ p.percentage {
     font-size: 0.9em;
 }
 .country-container > h2 {
-    width: 50%; /*adjusts the width of the underline to fit better*/
     position: relative;
     font-size: 2rem;
     margin-bottom: 20px;
