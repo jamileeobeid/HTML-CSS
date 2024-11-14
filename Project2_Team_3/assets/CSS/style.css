@@ -8,10 +8,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    transition: all 0.3s ease;
     scroll-behavior:smooth;
 }
 
-/*THE BELOW CODES ARE DEDICATED FOR THE HOME PAGE (index.html)*/
+/*-------------------------THE BELOW CODES ARE DEDICATED FOR THE HOME PAGE (index.html)-------------------------*/
 
 
 .image-container {
@@ -68,6 +69,7 @@ nav ul li a {
 }
 nav ul li a:hover {
     color: #006400;
+    transform: scale(1.05);
 }
 /* Styling the sidebar */
 .content-container {
@@ -112,6 +114,7 @@ nav ul li a:hover {
 .sidebar ul li:hover {
     background-color: #f0f8f5;
     color: #006400;
+    transform: translateX(5px);
 }
 
 /*styling the main content */
@@ -305,6 +308,9 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-right: 10px;
 }
+.country-section:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adds shadow on hover */
+}
 .country-header {
     display: flex;
     align-items: center;
@@ -333,6 +339,10 @@ body {
     text-align: center;
     width: 100px;
     margin: 0 auto;
+}
+.ingredient:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 .ingredient img {
     width: 80px;
@@ -372,25 +382,24 @@ footer {
     margin: 0 auto;
     padding: 0 2rem;
 }
-  
 .footer-container > div {
     flex: 1;
     min-width: 200px;
     margin-bottom: 1.5rem;
 }
-
 .footer-about p {
     font-size:1rem;
     color: #f1f1f1;
     line-height: 1.5;
 }
-  
 .footer-contact p {
     font-size: 1rem;
     margin: 0.3rem 0;
     color: #f1f1f1;
 }
-  
+.footer-contact p:hover {
+    color: #b5e7a0;
+}
 .footer-bottom {
     text-align: center;
     padding: 1rem;
@@ -398,3 +407,7 @@ footer {
     font-size: 0.9rem;
     color: #023002;
 }  
+.footer-bottom:hover {
+    background-color: #b5e7a0;
+    color: #023002;
+}
