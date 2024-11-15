@@ -6,3 +6,456 @@
 
 /*-------------------------THE BELOW CODES ARE DEDICATED FOR THE JAPAN PAGE (japan.html)-------------------------*/
 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease;
+    scroll-behavior:smooth;
+}
+/* Style for Japan-specific navigation on the left side */
+nav {
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+    top: 0; 
+    z-index: 1000; /*ensuring the nav stays on top of other content*/
+    background-color: rgba(240, 240, 240, 0.8);
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /*adding shadow for the navigation container*/
+    display: flex;
+}
+.nav-japan {
+    position: fixed; /*keeping the navigation bar fixed on the screen as the user scrolls*/
+    top: 0;
+    left: 0;
+    height: 100vh; /*ensuring the navigation bar takes up the full height of the viewport*/
+    width: 200px;
+    background-color: rgba(76, 20, 24, 0.789);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+.nav-japan ul {
+    list-style-type: none; /*removing default list bullet points */
+    display: flex; /*using Flexbox to align the list items */
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+.nav-japan ul li {
+    text-align: center;
+    margin: 10px;
+}
+.nav-japan ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.6em;
+    padding: 5px 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.nav-japan ul li a:hover {
+    color: darkred;
+    transform: scale(1.1);
+}
+
+/*styling for the main content area specific to Japan page */
+.image-container-japan {
+    position: absolute; /*making sure the image is positioned behind the header */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /*ensuring the image covers the full height of the viewport */
+    overflow: hidden;
+}
+.full-screen-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*ensuring the image covers the container without stretching */
+    position: absolute; /* keeping the image in the background */
+    top: 0;
+    left: 0;
+    z-index: -1; /*placing the image behind the header */
+}
+.header-japan {
+    position: absolute; /*ensures the text is placed above the image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+    z-index: 2; /*ensuring the text stays above the image */
+    padding: 50px 20px;
+}
+.title-container-japan {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+.title-container-japan h1 {
+    font-size: 4.5em;
+    font-weight: bold;
+    margin: 0;
+}
+.title-container-japan h3 {
+    font-size: 2em;
+    margin: 10px 0;
+    color: white;
+}
+.image-container-japan {
+    position: relative; /*positioning the image container relative to its normal position */
+    /*making the container take up the full width & height of the viewport */
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /*ensuring any content overflowing the container is hidden */
+    margin-top: 0%;
+}
+.history-container-japan {
+    display: flex; /*using flexbox to align child elements horizontally*/
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px auto;
+    max-width: 90%;
+    background-color: rgba(240, 240, 240, 0.9);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-left: 18%;
+    margin-right: 4%;
+}
+.history-text {
+    flex: 1; /*allowing this section to take up remaining space in the flex container */
+    padding-right: 20px;
+    color: black;
+    font-size: 1.3em;
+    line-height: 1.6;
+}
+.history-text h2{
+    color: darkred;
+}
+.history-image-photo {
+    max-width: 40%;
+    height: auto; /*allowing the height of the element to adjust automatically based on its content*/
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/*DISTRICT SECTION*/
+.fine-dining-japan {
+    padding: 40px;
+    background-color: rgba(240, 240, 240, 0.9);
+    /*setting 20px margin on top and bottom, auto margin on left and right to center the element horizontally*/
+    margin: 20px auto;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-left: 18%;
+    margin-right: 4%;
+}
+.fine-dining-japan h2 {
+    text-align: center;
+    font-size: 2.5em; 
+    color: darkred;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.city-container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /*making the container a flexbox, allowing its child elements to be aligned more easily */
+    flex-wrap: wrap; /*allowing the child elements to wrap onto the next line if they exceed the container's width */
+    gap: 20px;
+}
+.city-container:hover{
+    /*changing the scale of the container to 104% of its original size 
+    when hovered over, giving it a zoom effect */
+    transform: scale(1.04);
+}
+.city-container h3 {
+    font-size: 1.8em;
+    color: #79151c;
+}
+.city-container p {
+    flex: 1; /*allowing this section to take up remaining space in the flex container */
+    font-size: 1.4em;
+    line-height: 1.6;
+    color: black;
+}
+.city-container iframe {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.city-container a {
+    color: darkred;
+    text-decoration: none;
+    font-weight: bold;
+}
+.city-container a:hover {
+    text-decoration: underline;
+}
+/*SUSHI SECTION STYLING*/
+.sushi-section {
+    padding: 40px;
+    background-color: rgba(240, 240, 240, 0.9);
+    margin: 20px auto;
+    max-width: 90%;
+    border-radius: 10px; /*for rounded corners*/
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-left: 18%;
+    margin-right: 4%;
+    margin-bottom: 5%;
+}
+.sushi-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: darkred;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.sushi-section p {
+    font-size: 1.2em;
+    line-height: 1.8; /*adding space between lines*/
+    color: black;
+    margin-bottom: 15px;
+}
+.sushi-section video {
+    display: block; /*ensuring the video element is displayed as a block, allowing it to take up its own line*/
+    /*setting 20px margin on top and bottom, auto margin on left and right to center the element horizontally*/
+    margin: 20px auto;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.sushi-section a {
+    color: darkred;
+    font-weight: bold;
+    text-decoration: none;
+}
+.sushi-section a:hover {
+    text-decoration: underline;
+}
+/*HIROSHIMA SECTION*/
+#hiroshima-food-guide {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    font-family: 'Arial', sans-serif;
+    margin-left: 18%;
+    margin-right: 4%;
+}
+#hiroshima-food-guide h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 3%;
+    margin-bottom: 20px;
+    color: darkred;
+}
+.hiroshima-grid {
+    /*making a grid Layout*/
+    display: grid;
+    /* defining a responsive grid layout that automatically adjusts the number of columns based on available space. 
+    Each column will have a minimum width of 300px and can expand up to 1 fraction of the available space, 
+    creating flexible and adaptive grid columns. */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+  
+/*adding food items to flex container*/
+.food-item {
+    display: flex;
+    flex-direction: column; /*aligning items vertically*/
+    align-items: center;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden; /*ensuring no content spills outside the container*/
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.food-item:hover {
+    transform: scale(1.05); /*zooming out the item slightly (increases size)*/
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.food-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ddd;
+}
+.food-description {
+    padding: 20px;
+    background-color: #ffffff;
+}
+.food-description h3 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    color: darkred;
+    text-align: center;
+}
+.food-description p {
+    font-size: 1.3rem;
+    color: black;
+    text-align: justify; /*justifying the text to be spread evenly across the container */
+    line-height: 1.6;
+}  
+/*MATCHA CSS*/
+#matcha {
+  background-color: #f7faf6;
+  padding: 50px;
+  margin: 30px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  margin-left: 18%;
+  margin-right: 4%;
+}
+.matcha-content {
+  width: 45%;
+}
+.matcha-content h2 {
+  font-size: 2.5rem;
+  color: darkred;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.matcha-content p {
+  font-size: 1.3rem;
+  color: black;
+  line-height: 1.6; /*adding space between lines*/
+}
+.matcha-images {
+  width: 45%;
+  display: flex;
+  flex-direction: column; /*aligning items vertically */
+  align-items: flex-end; /*aligning the items at the end of the flex container */
+}
+.matcha-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  /*applying a smooth transition effect to the 'transform' property over 0.3 seconds 
+  with an 'ease-in-out' timing function */
+  transition: transform 0.3s ease-in-out;
+}
+.matcha-img:hover {
+  transform: scale(1.05); /*zooming out the item slightly (increases size)*/
+}
+.matcha-img-1 {
+  max-height: 250px;
+  /*ensuring the image covers the entire container, cropping it if necessary to fit */
+  object-fit: cover;
+}
+.matcha-img-2 {
+  max-height: 250px;
+  object-fit: cover;
+}
+#fishing {
+    background-color: #fff;
+    padding: 50px;
+    margin: 30px 0;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; /*ensuring no content spills outside the container */
+    margin-left: 18%;
+    margin-right: 4%;
+}
+.fishing-content {
+    width: 45%;
+}
+.fishing-content h2 {
+    font-size: 2.5rem;
+    color: darkred;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase; /*changing all letters to CAPITAL LETTERS*/
+    letter-spacing: 1px;
+}
+.fishing-content p {
+    font-size: 1.3rem;
+    color: black;
+    line-height: 1.7;
+}
+.fishing-image {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fishing-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+.fishing-img:hover {
+    transform: scale(1.1); /* Gentle zoom effect on hover */
+}     
+/* footer styles */
+footer {
+    width: 87vw;
+    background-color: darkred;
+    color: #f1f1f1;
+    padding: 2rem 0;
+    font-family: Arial, sans-serif;
+    margin-left: 13%;
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap; /*allowing child elements to wrap to the next line when there is not enough space*/
+    max-width: 100vw; /*restricting the maximum width of the footer container to the full viewport width*/
+    margin: 0 auto; /*centering the footer container horizontally */
+    padding: 0 2rem;
+}
+.footer-container > div {
+    flex: 1;
+    min-width: 100px;
+    margin-bottom: 1.5rem;
+}
+.footer-about p {
+    font-size:1rem;
+    color: #f1f1f1;
+    line-height: 1.5;
+}
+.footer-contact p {
+    font-size: 1rem;
+    margin: 0.3rem 0;
+    color: #f1f1f1;
+}
+.footer-contact p:hover {
+    color: lightcoral; /*changing text color when user hovers*/
+}
+.footer-bottom {
+    text-align: center;
+    padding: 1rem;
+    background-color: #ccc;
+    font-size: 0.9rem;
+    color: darkred;
+}  
+.footer-bottom:hover {
+    background-color: lightcoral;
+    color: rgba(139, 0, 0, 0.658);
+}
