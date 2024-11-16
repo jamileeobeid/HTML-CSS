@@ -34,7 +34,7 @@ nav {
     left: 0;
     height: 100vh; /*ensuring the navigation bar takes up the full height of the viewport*/
     width: 200px;
-    background-color: rgba(76, 20, 24, 0.789);
+    background-color: rgba(76, 20, 24, 0.668);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -346,6 +346,8 @@ nav {
   display: flex;
   flex-direction: column; /*aligning items vertically */
   align-items: flex-end; /*aligning the items at the end of the flex container */
+  justify-content: center;
+  align-items: center;
 }
 .matcha-img {
   width: 100%;
@@ -459,3 +461,320 @@ footer {
     background-color: lightcoral;
     color: rgba(139, 0, 0, 0.658);
 }
+/*---------------------------------------------RESPONSIVENESS-----------------------------------------------*/
+
+/* MOBILE VIEW RESPONSIVENESS */
+@media (max-width: 500px) {
+
+    /*showing the hamburger icon when screen is Mobile*/
+    nav.nav-japan details {
+      display: block;
+    }
+    nav.nav-japan ul {
+      display: flex; 
+      justify-content: space-around;
+      list-style: none;
+      padding: 0;
+    }
+    .title-container-japan {
+      text-align: center;
+      margin: 10px auto;
+      padding: 10px;
+    }
+    .title-container-japan h1 {
+      font-size: 2rem;
+      color: darkred;
+    }
+    .title-container-japan h3 {
+      font-size: 1.2rem;
+      color: darkred;
+    }
+    nav.nav-japan {
+      position: relative;
+      width: 100%;
+      height: auto;
+      background-color: rgba(139, 0, 0, 0.863);
+      padding: 10px 0;
+      box-shadow: none;
+      border-radius: 0;
+      margin-top: 220px;
+    }
+    /*adding the details and summary for the collapsible menu*/
+    nav.nav-japan details {
+      display: block;
+    }
+    nav.nav-japan summary {
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      text-align: center;
+      list-style: none; /*removing the default arrow*/
+      font-weight: bold;
+    }
+    nav.nav-japan summary::before {
+      content: '☰'; /*adding a hamburger icon */
+      font-size: 2.5rem;
+      color: white;
+      margin-right: 10px;
+    }
+    /*initially hiding the menu */
+    nav.nav-japan ul {
+      display: none;
+      list-style-type: none;
+      padding: 0;
+    }
+    /*showing the menu when the details element is open */
+    nav.nav-japan details[open] ul {
+      display: block;
+      text-align: center;
+    }
+    nav.nav-japan ul li a {
+      font-size: 1.2em;
+      padding: 8px;
+      display: block;
+    }
+    .image-container-japan {
+      width: 100%;
+      height: auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .full-screen-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    video {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    .history-container-japan,
+    .fine-dining-japan,
+    .sushi-section,
+    #hiroshima-food-guide {
+      margin: 10px auto;
+      max-width: 95%;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    #matcha,
+    #fishing {
+      display: flex;
+      flex-direction: column-reverse;
+      margin: 10px auto;
+      max-width: 95%;
+      padding: 0px;
+      margin-left: 0%;
+      max-width: 100%;
+    }
+    #matcha p,
+    #fishing p {
+      width: 100%;
+    }
+    .matcha-img,
+    .fishing-img {
+      width: 80vw;
+      align-items: center;
+    }
+    .fishing-img {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .history-text,
+    .city-container p,
+    .sushi-section p {
+      font-size: 1.05rem;
+      line-height: 1.4;
+      text-align: justify;
+      margin: 0;
+      padding: 0;
+    }
+    .history-image-photo,
+    .food-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .history-image-photo {
+      margin-left: 8px;
+    }
+    .hiroshima-grid {
+      grid-template-columns: 1fr;
+    }
+    footer {
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 0.8rem;
+      width: 100vw;
+    }
+    .footer-container > div {
+      margin-bottom: 10px;
+    }
+    .footer-bottom {
+      font-size: 0.7rem;
+    }
+    /*hiding the second nav for mobile */
+    nav.nav-japan:nth-of-type(2) {
+      display: none;
+    }
+  }
+
+  /* TABLET VIEW RESPONSIVENESS */
+  @media (max-width: 900px) and (min-width: 501px) {
+
+    /* Showing the hamburger icon when screen is Tablet */
+    nav.nav-japan details {
+      display: block;
+    }
+    nav.nav-japan ul {
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+      padding: 0;
+    }
+    .title-container-japan {
+      text-align: center;
+      margin: 20px auto;
+      padding: 10px;
+    }
+    .title-container-japan h1 {
+      font-size: 2.5rem;
+      color: darkred;
+    }
+    .title-container-japan h3 {
+      font-size: 1.5rem;
+      color: darkred;
+    }
+    nav.nav-japan {
+      position: relative;
+      width: 100%;
+      height: auto;
+      background-color: rgba(139, 0, 0, 0.863);
+      padding: 10px 0;
+      box-shadow: none;
+      border-radius: 0;
+      margin-top: 250px;
+    }
+    /* Adding the details and summary for the collapsible menu */
+    nav.nav-japan details {
+      display: block;
+    }
+    nav.nav-japan summary {
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      text-align: center;
+      list-style: none; /* Removing the default arrow */
+      font-weight: bold;
+    }
+    nav.nav-japan summary::before {
+      content: '☰'; /* Adding a hamburger icon */
+      font-size: 2.5rem;
+      color: white;
+      margin-right: 10px;
+    }
+    /* Initially hiding the menu */
+    nav.nav-japan ul {
+      display: none;
+      list-style-type: none;
+      padding: 0;
+    }
+    /* Showing the menu when the details element is open */
+    nav.nav-japan details[open] ul {
+      display: block;
+      text-align: center;
+    }
+    nav.nav-japan ul li a {
+      font-size: 1.5em;
+      padding: 8px;
+      display: block;
+    }
+    .image-container-japan {
+      width: 100%;
+      height: auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .full-screen-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    video {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    .history-container-japan,
+    .fine-dining-japan,
+    .sushi-section,
+    #hiroshima-food-guide {
+      margin: 20px auto;
+      max-width: 95%;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    #matcha,
+    #fishing {
+      display: flex;
+      flex-direction: column-reverse;
+      margin: 20px auto;
+      max-width: 95%;
+      padding: 0px;
+      margin-left: 0%;
+      max-width: 100%;
+    }
+    #matcha p,
+    #fishing p {
+      width: 100%;
+    }
+    .matcha-img,
+    .fishing-img {
+      width: 80vw;
+      align-items: center;
+    }
+    .fishing-img {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .history-text,
+    .city-container p,
+    .sushi-section p {
+      font-size: 1.2rem;
+      line-height: 1.4;
+      text-align: justify;
+      margin: 0;
+      padding: 0;
+    }
+    .history-image-photo,
+    .food-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .history-image-photo {
+      margin-left: 8px;
+    }
+    .hiroshima-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    footer {
+      margin: 20px 0;
+      padding: 15px;
+      font-size: 0.9rem;
+      width: 100vw;
+    }
+    .footer-container > div {
+      margin-bottom: 15px;
+    }
+    .footer-bottom {
+      font-size: 0.8rem;
+    }
+    /* Hiding the second nav for tablet */
+    nav.nav-japan:nth-of-type(2) {
+      display: none;
+    }
+  }
