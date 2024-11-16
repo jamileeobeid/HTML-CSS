@@ -130,6 +130,16 @@ body {
 .card-video {
     flex: 1;
 }
+
+.card-img {
+    margin-left: auto;
+}
+
+.card-img img {
+    flex: 1;
+    border-radius: 8px;
+    width: 300px;
+}
   
 .card-video iframe {
     border-radius: 10px;
@@ -153,6 +163,65 @@ body {
     box-shadow: 0 8px 20px rgba(88, 65, 41, 0.7);
     background-color: #3a3a3a;
 }
+
+.spices-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px auto;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+.spice-card {
+    background-color: #2c2c2c;
+    border: 2px solid #eb7c05;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+    position: relative;
+    height: 150px;
+}
+
+.spice-card img {
+    width: 150px;
+    height: 150px;
+    object-fit:cover;
+    transition: opacity 0.3s;
+}
+
+.spice-card:hover {
+    transform: scale(1.05);
+    background-color: #3a3a3a;
+    box-shadow: 0 8px 20px rgba(88, 65, 41, 0.7);
+}
+
+.spice-card:hover img {
+    opacity: 0.3;
+}
+
+.spice-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-align: center;
+    z-index: 2;
+}
+
+.spice-info p {
+    font-size: 0.75em;
+}
+
+.spice-card:hover .spice-info {
+    opacity: 1;
+}
+
   
   
 footer {
