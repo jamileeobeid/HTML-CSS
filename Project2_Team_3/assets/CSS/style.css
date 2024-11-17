@@ -411,3 +411,314 @@ footer {
     background-color: #b5e7a0;
     color: #023002;
 }
+
+/*---------------------------------------------RESPONSIVENESS-----------------------------------------------*/
+
+/* Base Styles - Hide both navs initially */
+.nav-full,
+.nav-hamburger {
+    display: none;
+}
+
+/* MOBILE VIEW RESPONSIVENESS */
+@media (max-width: 500px) {
+    /* Show hamburger menu for mobile */
+    .nav-hamburger {
+        display: block;
+        font-size: 2.5rem; /* Adjust the size of the hamburger icon */
+        cursor: pointer;
+        margin-bottom: 10px; /* Add space below the hamburger menu */
+    }
+
+    /* Hide default arrow and text in summary */
+    nav summary {
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+        text-align: center;
+        list-style: none; /* Remove default arrow */
+        font-weight: bold;
+        padding: 10px;
+        margin: 0; /* Remove any margins to ensure no extra space */
+    }
+
+    nav ul li a {
+        font-size: 0.6em;
+        padding: 5px 10px;
+    }
+
+    /* Remove default arrow from summary */
+    nav summary::-webkit-details-marker {
+        display: none;
+    }
+
+    /* Add the hamburger icon using content */
+    nav summary::before {
+        content: '☰'; /* Hamburger icon */
+        font-size: 1.5rem;
+        color: black; /* Color of the hamburger icon */
+        margin-right: 10px; /* Spacing between icon and text */
+    }
+
+    /* Adjust the hamburger menu */
+    .nav-hamburger details {
+        width: 100%; /* Full width for the dropdown */
+    }
+
+    .nav-hamburger summary {
+        cursor: pointer;           /* Makes the summary clickable */
+        list-style: none;          /* Removes default arrow (optional) */
+        font-size: 1.2rem;         /* Adjust size for better visibility */
+    }
+
+    .nav-hamburger ul {
+        list-style-type: none;     /* Remove bullets */
+        padding: 0;                /* Remove default padding */
+        margin: 0;                 /* Remove default margin */
+        display: none;             /* Hide by default */
+        flex-direction: column;    /* Stack items vertically */
+        gap: 10px;                 /* Add spacing between items */
+        text-align: center;        /* Center the items */
+    }
+
+    .nav-hamburger li {
+        text-align: left;          /* Align text to the left (optional) */
+    }
+
+    .nav-hamburger a {
+        text-decoration: none;     /* Remove underline */
+        padding: 10px 15px;        /* Add padding for links */
+        color: black;               /* Text color */
+        border-radius: 5px;        /* Optional: rounded corners */
+    }
+
+    .nav-hamburger a:hover {
+        background-color: #ddd;    /* Highlight on hover */
+    }
+
+    /* Ensure the hamburger menu stays in the flow */
+    .nav-hamburger {
+        position: relative; /* Ensure it takes up space in the layout */
+        z-index: 1; /* Keep it above other content but within the flow */
+        margin-bottom: 10px; /* Add spacing below the menu */
+    }
+
+    /* Ensure the dropdown (expanded menu) pushes content */
+    .nav-hamburger details[open] ul {
+        display: flex; /* Show the menu when open */
+        flex-direction: column; /* Stack menu items vertically */
+        margin-top: 10px; /* Add spacing below menu items */
+    }
+
+    /* Adjust title on mobile */
+    .title {
+        font-size: 2.5em;
+        top: 40%;
+        left: 5%;
+        position: absolute; /* Ensure title is positioned correctly */
+        width: 90%; /* Allow title to take more width */
+        text-align: center; /* Center title on small screens */
+        margin-bottom: 20px; /* Add space below the title */
+    }
+
+    /* Adjust image container and image size for mobile */
+    .image-container {
+        text-align: center; /* Centering the content */
+        margin: 10px;
+    }
+
+    .image-container img.full-width-image {
+        display: block; /* Make sure image behaves like a block element */
+        width: 100%; /* Make image full-width on mobile */
+        height: auto; /* Maintain aspect ratio */
+        margin-top: 0; /* Prevent overlapping with the menu */
+    }
+
+    /* Adjust sidebar and content layout */
+    .content-container {
+        flex-direction: column; /* Stack sidebar and main content vertically */
+        margin: 20px;
+    }
+
+    .sidebar {
+        width: 100%; /* Sidebar takes full width on mobile */
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        margin-left: 0; /* Remove extra margin */
+    }
+
+    /* Adjust sidebar items for smaller screens */
+    .sidebar ul li {
+        font-size: 1.1em; /* Smaller font size */
+    }
+
+    /* History image size adjustments */
+    .history-image {
+        width: 100%; /* Allow history image to take more space */
+        margin-bottom: 20px;
+    }
+
+    /* Adjust content section font sizes */
+    .main-content h2 {
+        font-size: 1.8em;
+    }
+
+    .main-content p {
+        font-size: 1em; /* Smaller paragraph font size */
+    }
+
+    /* Ingredient section: Stack ingredients vertically */
+    .ingredient-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ingredient {
+        width: 80%; /* Ingredients take up more width */
+        margin-bottom: 10px;
+    }
+
+    /* Country section adjustments */
+    .country-container {
+        width: 100%;
+    }
+
+    .country-section {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .country-header img {
+        width: 35px; /* Adjust country flag size */
+    }
+
+    .country-name {
+        font-size: 1.3em; /* Smaller country name */
+    }
+
+    /* Footer adjustments for mobile */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-container > div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* TABLET VIEW RESPONSIVENESS */
+@media (max-width: 900px) and (min-width: 501px) {
+    /* Nav menu adjustments (unchanged) */
+    .nav-full {
+        display: block;
+    }
+    .nav-hamburger {
+        display: none;
+    }
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    nav ul li a {
+        font-size: 1.6em;
+        padding: 5px 10px;
+    }
+
+    /* Image container adjustments (unchanged) */
+    .image-container {
+        text-align: center;
+        margin: 40px 0;
+    }
+    .image-container img.full-width-image {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Adjust content container layout */
+    .content-container {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align children to the left for consistency */
+        gap: 20px; /* Add spacing between children */
+    }
+
+    /* Country container styles */
+    .country-container {
+        width: 100%;
+    }
+
+    /* Sidebar styles */
+    .sidebar-left {
+        width: 100%;
+    }
+
+    /* Main content styles */
+    .main-content {
+        width: 100%; /* Full width for better display */
+    }
+
+    /* Sidebar content */
+    .sidebar ul li {
+        font-size: 1.2em;
+    }
+
+    .sidebar {
+        width: 90vw;
+        padding: 20px;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-right: 2%;
+        flex-shrink: 0; /*preventing sidebar from shrinking*/
+    }
+
+    /* Main content adjustments */
+    .main-content h2 {
+        font-size: 2em;
+    }
+    .main-content p {
+        font-size: 1.2em;
+    }
+}
+
+/* DESKTOP VIEW (larger than 900px) */
+@media (min-width: 901px) {
+    /* Make the full navbar visible on desktop */
+    .nav-full {
+        display: block;
+    }
+
+    /* Hide the hamburger menu on desktop */
+    .nav-hamburger {
+        display: none;
+    }
+
+    /* Optional: Ensure the nav links are displayed properly */
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Styling the navigation links */
+    nav ul li a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 1.6em;
+        padding: 5px 10px;
+    }
+}
