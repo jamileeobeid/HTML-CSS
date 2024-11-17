@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
   
 body {
@@ -47,7 +48,7 @@ body {
   
 .head {
     position: relative;
-    background-image: url('/assets/media/india-head.jpg'); 
+    background-image: url('/assets/media/spices.jpg'); 
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -97,6 +98,23 @@ body {
     margin-right: 220px;
     background-color: #1b1b1b;
     color: #fff;
+}
+
+.history h1 {
+    color: #eb7c05;
+}
+
+.history p {
+    font-size: 1.3em;
+}
+
+.history img {
+    width: 230px;
+    float: left;
+    padding: 5px;
+    background-color: #2c2c2c;
+    border-radius: 8px;
+    margin: 15px;
 }
   
 .content-wrapper {
@@ -164,14 +182,41 @@ body {
     background-color: #3a3a3a;
 }
 
+.text {
+    margin: 15px;
+    font-size: 1.3em;
+}
+
+
+.text h1 {
+    color: #eb7c05;
+}
+
+.text iframe {
+    width: 100%;
+    max-width: 600px;
+    border: none;
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: #2c2c2c;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+.text:hover iframe {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(88, 65, 41, 0.7);
+}
+
 .spices-grid {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
-    margin: 30px auto;
-    padding: 20px;
-    justify-content: space-around;
+    margin: 15px auto;
+    padding: 15px;
+    justify-content: space-between;
 }
 
 .spice-card {
@@ -222,7 +267,84 @@ body {
     opacity: 1;
 }
 
+.regional-delicacies {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #2c2c2c;
+    border: 2px solid #eb7c05;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .regional-delicacies:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(88, 65, 41, 0.7);
+    background-color: #3a3a3a;
+}
+
   
+  .regional-delicacies h2 {
+    text-align: center;
+    color: #eb7c05;
+    font-size: 1.8rem;
+  }
+  
+  .regions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .region-link {
+    text-decoration: none;
+    background-color: #eb7c05;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .region-link:hover {
+    background-color: #ff9e45;
+    transform: scale(1.05);
+  }
+  
+  .dishes {
+    margin-top: 20px;
+  }
+  
+  .dish {
+    display: none;
+    text-align: center;
+    padding: 10px 15px;
+    margin-top: 10px;
+    font-size: 1rem;
+    background-color: #fff;
+    border: 1px solid #eb7c05;
+    border-radius: 5px;
+    color: #333;
+  }
+
+  .dish img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .dish:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dish:target {
+    display: block;
+  }
   
 footer {
     width: 100vw;
@@ -268,3 +390,5 @@ footer {
     background-color: #eb7c05;
     color: #023002;
 }
+
+
