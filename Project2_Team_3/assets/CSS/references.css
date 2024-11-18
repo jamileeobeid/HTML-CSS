@@ -20,6 +20,27 @@ body {
     background-color: #f4f4f4;
 }
 
+/*Navigation Styles*/
+.nav {
+    background-color: #333;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5em;
+}
+.nav a {
+    display:inline-block ;
+    color: white;
+    text-decoration: none;
+    padding:15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav a:hover  {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
 /* Header styles */
 .header {
     background: url('/assets/media/references.avif') no-repeat center center/cover;

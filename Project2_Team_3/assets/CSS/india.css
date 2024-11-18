@@ -440,6 +440,18 @@ footer {
     .card-content {
         flex-direction: column;
     }
+    .content-wrapper2 {
+        flex-direction: column;
+    }
+    .text h1{
+        font-size: 1.5em;
+    }
+    .text p {
+        font-size: 0.75em;
+    }
+    .text iframe {
+        width: 400px;
+    }
       
     
 }
