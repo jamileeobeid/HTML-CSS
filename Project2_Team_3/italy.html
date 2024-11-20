@@ -33,13 +33,10 @@
                 background-color: red;
             }
             .navbar{
-                background-color: rgba(255, 0, 0, 0.658) ;
+                background-color: rgba(255, 0, 0, 0.85) ;
                 position: sticky;
                 top: 0;
                 height: 10vh;
-            }
-            .main{
-                
             }
             .header img{
                 height: 90vh;
@@ -67,10 +64,20 @@
                 padding: 10px;
                 border-radius: 10px;
                 margin: 0;
+                text-align: justify;
+            }
+            .grid p:hover{
+                background-color: red;
+                transform: scale(1.05);
+                transition: all 0.3s ease;
             }
             .dish img{
                 width: 60%;
                 align-self: center;
+                border-radius: 10px;
+            }
+            .dish p{
+                position: absolute;
             }
             .recommendation{
                 background-color: aliceblue;
@@ -84,50 +91,50 @@
                 width: 50%;
             }
             /* footer styles */
-footer {
-    width: 100vw;
-    background-color: #023002;
-    color: #f1f1f1;
-    padding: 2rem 0;
-    font-family: Arial, sans-serif;
-}
-  
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 100vw;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-.footer-container > div {
-    flex: 1;
-    min-width: 200px;
-    margin-bottom: 1.5rem;
-}
-.footer-about p {
-    font-size:1rem;
-    color: #f1f1f1;
-    line-height: 1.5;
-}
-.footer-contact p {
-    font-size: 1rem;
-    margin: 0.3rem 0;
-    color: #f1f1f1;
-}
-.footer-contact p:hover {
-    color: #b5e7a0;
-}
-.footer-bottom {
-    text-align: center;
-    padding: 1rem;
-    background-color: #ccc;
-    font-size: 0.9rem;
-    color: #023002;
-}  
-.footer-bottom:hover {
-    background-color: #b5e7a0;
-    color: #023002;
-}
+            footer {
+                width: 100%;
+                background-color: #8c0000;
+                color: #f1f1f1;
+                padding: 2rem 0;
+                font-family: Arial, sans-serif;
+            }
+            
+            .footer-container {
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 100%;
+                margin: 0 auto;
+                padding: 0 2rem;
+            }
+            .footer-container > div {
+                flex: 1;
+                min-width: 200px;
+                margin-bottom: 1.5rem;
+            }
+            .footer-about p {
+                font-size:1rem;
+                color: #f1f1f1;
+                line-height: 1.5;
+            }
+            .footer-contact p {
+                font-size: 1rem;
+                margin: 0.3rem 0;
+                color: #f1f1f1;
+            }
+            .footer-contact p:hover {
+                color: #b5e7a0;
+            }
+            .footer-bottom {
+                text-align: center;
+                padding: 1rem;
+                background-color: #ccc;
+                font-size: 0.9rem;
+                color: #023002;
+            }  
+            .footer-bottom:hover {
+                background-color: #b5e7a0;
+                color: #023002;
+            }
 
         </style>
     </head>
@@ -137,7 +144,7 @@ footer {
                 <img src = './assets/media/italy/pizza.jpg' class = 'main-pic'>
             </div>
             
-            <div class = 'flex column main'>
+            <div class = 'flex column'>
                 <div class = 'navbar flex row'>
                     <a href = 'index.html'>Home</a>
                     <a href = 'japan.html'>Japan</a>
