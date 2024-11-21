@@ -162,6 +162,9 @@
             .carousel div[id]:target ~ #default{
                 display: none;
             }
+            .recommendation{
+                height: 5vh;
+            }
         </style>
     </head>
     <body>
@@ -179,7 +182,7 @@
                     <a href = 'references.html'>Reference</a>
                 </div>
 
-                <div class = 'content'>
+                <div class = 'content flex column'>
                     <h1>What does italian cuisine look like?</h1>
                     <p>By: Anonymous User<br>Est. time to read: 5 mins</p>
                     <p>We were lucky in that the appliances in the home had been recently replaced and I liked them.  I had specific needs for appliances - I wanted a large side-by-side fridge, two ovens and a 6-burner range.  And this house had all of those.   That was lucky because of all the backordered appliances during Covid, so I got to avoid that frustration. </p>
@@ -251,23 +254,26 @@
                         </div>
 
                     </div>
+
+
                     <h2>Not popular italian dishes to cook at home</h2>
-                    
-                    <div class = 'dish'>
-                        <h3>Gianduia Semifreddo (Chocolate-Hazelnut Frozen Dessert)</h3>
-                        <img src = './assets/media/italy/frozen_dessert.png'>
-                        <a href = 'https://food52.com/recipes/30430-gianduia-semifreddo-chocolate-hazelnut-frozen-dessert?clickref=1100lzQpytTr&utm_source=partnerize&utm_medium=affiliate&utm_campaign=skimlinks_phg'>Recipe</a>
+                    <div class = 'container flex row'>
+                        <div class = 'dish'>
+                            <h3>Gianduia Semifreddo (Chocolate-Hazelnut Frozen Dessert)</h3>
+                            <a href = 'https://food52.com/recipes/30430-gianduia-semifreddo-chocolate-hazelnut-frozen-dessert?clickref=1100lzQpytTr&utm_source=partnerize&utm_medium=affiliate&utm_campaign=skimlinks_phg'><img src = './assets/media/italy/frozen_dessert.png'></a>
+                        </div>
+
+                        <div class = 'dish'>
+                            <h3>Chicken Cacciatore</h3>
+                            <a href = 'https://food52.com/recipes/18223-chicken-cacciatore?clickref=1011lzWRcnfU&utm_source=partnerize&utm_medium=affiliate&utm_campaign=skimlinks_phg'><img src = './assets/media/italy/chicken_cacciatore.png'></a>
+                        </div>
+
+                        <div class = 'dish' style = 'align-items: center;justify-content: center;'>
+                            <h3>White Clam Pizza</h3>
+                            <a href = 'https://food52.com/recipes/15488-white-clam-pizza?clickref=1100lzQpyMxz&utm_source=partnerize&utm_medium=affiliate&utm_campaign=skimlinks_phg'><img src = './assets/media/italy/white_clam_pizza.png'></a>
+                        </div>
                     </div>
-                    <div class = 'dish'>
-                        <h3>Chicken Cacciatore</h3>
-                        <img src = './assets/media/italy/chicken_cacciatore.png'>
-                        <a href = 'https://food52.com/recipes/18223-chicken-cacciatore?clickref=1011lzWRcnfU&utm_source=partnerize&utm_medium=affiliate&utm_campaign=skimlinks_phg'>Recipe</a>
-                    </div>
-                    <div class = 'dish'>
-                        <h3>White Clam Pizza</h3>
-                        <img src = './assets/media/italy/white_clam_pizza.png'>
-                        <a href = 'https://food52.com/recipes/15488-white-clam-pizza?clickref=1100lzQpyMxz&utm_source=partnerize&utm_medium=affiliate&utm_campaign=skimlinks_phg'>Recipe</a>
-                    </div>
+
 
                     <div class = 'recommendations'>
                         <p>Thank you for reading my blog! If you find the information here interesting, you may also like posts of my colleagues!
