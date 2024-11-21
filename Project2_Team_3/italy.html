@@ -37,6 +37,7 @@
                 position: sticky;
                 top: 0;
                 height: 10vh;
+                z-index: 1;
             }
             .header img{
                 height: 90vh;
@@ -68,8 +69,17 @@
             }
             .grid p:hover{
                 background-color: red;
-                transform: scale(1.05);
+                transform: scale(1.03);
                 transition: all 0.3s ease;
+            }
+            .carousel{
+                background-color: yellow;
+            }
+            .carousel > .dish{
+                display: none;
+            }
+            .dish{
+                background-color: red;
             }
             .dish img{
                 width: 60%;
@@ -132,7 +142,18 @@
                 background-color: #b5e7a0;
                 color: #023002;
             }
-
+            #default{
+                display: block;
+            }
+            .carousel .dish[id]:target ~ #default{
+                display:none;
+            }
+            #margarita:target, #lasagna:target, #fettucini:target{
+                display: block;
+            }
+            #margarita, #lasagna, #fettucini{
+                display: none;
+            }
         </style>
     </head>
     <body>
@@ -175,31 +196,42 @@
                         <p>6. Focus on Experience:<br>
                         Italian food is not just about eating, but about enjoying a complete experience. Eating is a social act, and Italians value the time spent together at the table, sharing laughter and conversation.</p>
                     </div>
-                    <h2>Popular italian dishes</h2>
-                    <div class = 'dish'>
-                        <h3>Margarita</h3>
-                        <img src = './assets/media/italy/margarita.png'>
-                        <p>The first thing that comes to mind when you think of Italian cuisine is undoubtedly pizza. Pizzas, made with a variety of ingredients, offer an option to satisfy every palate. Pizza, considered the most important dish in Italy, plays a big role in the country's cuisine, even though it is known as fast food in the world.
+                    <div class = 'carousel'>
+                        <h2>Popular italian dishes</h2>
+                        <div class = 'dish' id = 'margarita'>
+                            <a href = "#default"><</a>
+                            <h3>Margarita</h3>
+                            <img src = './assets/media/italy/margarita.png'>
+                            <p>The first thing that comes to mind when you think of Italian cuisine is undoubtedly pizza. Pizzas, made with a variety of ingredients, offer an option to satisfy every palate. Pizza, considered the most important dish in Italy, plays a big role in the country's cuisine, even though it is known as fast food in the world.
 
-                            <br>The most frequently preferred pizza recipe in Italy is Margarita, and it is consumed all over the world with its light structure and taste that appeals to every taste.
-                            
-                            <br>Prepared in a very practical way, Margarita contains flour, olive oil, water, dry yeast, salt, granulated sugar, tomatoes, oregano, basil, and mozzarella cheese. Considering its ingredients, pizza is also a suitable choice for a vegetarian diet, and it is a filling option.</p>
-                    </div>
-                    <div class = 'dish'>
-                        <h3>Lasagna</h3>
-                        <img src = './assets/media/italy/lasagna.png'>
-                        <p>Lasagne, which originated in Bologna, Italy, is an Italian dish that is among the local flavours of the country. It is also considered a type of pasta dish and is prepared with different methods and ingredients.
+                                <br>The most frequently preferred pizza recipe in Italy is Margarita, and it is consumed all over the world with its light structure and taste that appeals to every taste.
+                                
+                                <br>Prepared in a very practical way, Margarita contains flour, olive oil, water, dry yeast, salt, granulated sugar, tomatoes, oregano, basil, and mozzarella cheese. Considering its ingredients, pizza is also a suitable choice for a vegetarian diet, and it is a filling option.</p>
+                                <a href = "#lasagna">></a>
+                        </div>
+                        <div class = 'dish' id = 'lasagna'>
+                            <a href = "#margarita"><</a>
+                            <h3>Lasagna</h3>
+                            <img src = './assets/media/italy/lasagna.png'>
+                            <p>Lasagne, which originated in Bologna, Italy, is an Italian dish that is among the local flavours of the country. It is also considered a type of pasta dish and is prepared with different methods and ingredients.
 
-                            Lasagna typically contains lasagna sheets, ground meat, onions, tomatoes, tomato paste, olive oil, garlic, salt, butter, milk, flour, black pepper, and Parmesan cheese. The meat, tomato sauce, and special dough are prepared and baked in the oven, topped with béchamel sauce and cheese.</p>
-                    </div>
-                    <div class = 'dish'>
-                        <h3>Fettucini Alfredo</h3>
-                        <img src = './assets/media/italy/fettucini_alfredo.png'>
-                        <p>Fettuccine Alfredo is a type of pasta unique to Italy, made with ingredients such as butter, Parmesan cheese, chicken breast, mushrooms, olive oil, cream, basil, garlic, and black pepper.
+                                Lasagna typically contains lasagna sheets, ground meat, onions, tomatoes, tomato paste, olive oil, garlic, salt, butter, milk, flour, black pepper, and Parmesan cheese. The meat, tomato sauce, and special dough are prepared and baked in the oven, topped with béchamel sauce and cheese.</p>
+                                <a href = "#fettucini">></a> 
+                        </div>
+                        <div class = 'dish' id = 'fettucini'>
+                            <a href = "#lasagna"><</a>
+                            <h3>Fettucini Alfredo</h3>
+                            <img src = './assets/media/italy/fettucini_alfredo.png'>
+                            <p>Fettuccine Alfredo is a type of pasta unique to Italy, made with ingredients such as butter, Parmesan cheese, chicken breast, mushrooms, olive oil, cream, basil, garlic, and black pepper.
 
-                            The inventor of the dish, which appeared in a restaurant in Rome at the beginning of the 20th century, is Alfredo Di Lelio. Although cream and chicken are not used in the first recipe, this unique flavor, which has spread around the world over time, is made with different techniques and ingredients.
-                            
-                            Fettucini Alfredo, which manages to attract attention with its soft texture, lingering flavour, and satisfying feature, is among the favourite dishes that you can find in almost every restaurant.</p>
+                                The inventor of the dish, which appeared in a restaurant in Rome at the beginning of the 20th century, is Alfredo Di Lelio. Although cream and chicken are not used in the first recipe, this unique flavor, which has spread around the world over time, is made with different techniques and ingredients.
+                                
+                                Fettucini Alfredo, which manages to attract attention with its soft texture, lingering flavour, and satisfying feature, is among the favourite dishes that you can find in almost every restaurant.</p>
+                        </div>
+                        <div class = 'dish' id = 'default'>
+                            <h3>Check out popular dishes by using arrows!</h3>
+                            <a href = '#margarita'>></a>
+                        </div>
                     </div>
                     <h2>Not popular italian dishes to cook at home</h2>
                     
