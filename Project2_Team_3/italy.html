@@ -53,6 +53,7 @@
                 align-self: center;
                 background-color: lightgreen;
                 padding: 20px;
+                margin-top: 10px;
             }
             .grid{
                 display:grid;
@@ -98,6 +99,7 @@
                 color: #f1f1f1;
                 padding: 2rem 0;
                 font-family: Arial, sans-serif;
+                margin-top: 10px;
             }
             
             .footer-container {
@@ -165,6 +167,43 @@
             .recommendation{
                 height: 5vh;
             }
+            .container .dish{
+                border: 1px solid black;
+                justify-content: center;
+                align-items: center;
+                flex:1;
+                display: flex;
+                flex-direction: column;
+                padding: 5px;
+            }
+            .container{
+                gap:5px;
+            }
+            .container .dish a{
+                justify-content: center;
+                align-items: center;
+                flex:1;
+            }
+            .like{
+                animation: moveAndChangeColor 1s infinite;
+                width: 10%;
+                height: auto;
+            }
+            @keyframes moveAndChangeColor {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(-10deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+            }
+            .end{
+                text-align: right;                
+            }
+
         </style>
     </head>
     <body>
@@ -259,8 +298,10 @@
                     <h2>Not popular italian dishes to cook at home</h2>
                     <div class = 'container flex row'>
                         <div class = 'dish'>
+                            <a href = 'https://food52.com/recipes/30430-gianduia-semifreddo-chocolate-hazelnut-frozen-dessert?clickref=1100lzQpytTr&utm_source=partnerize&utm_medium=affiliate&utm_campaign=skimlinks_phg'>
                             <h3>Gianduia Semifreddo (Chocolate-Hazelnut Frozen Dessert)</h3>
-                            <a href = 'https://food52.com/recipes/30430-gianduia-semifreddo-chocolate-hazelnut-frozen-dessert?clickref=1100lzQpytTr&utm_source=partnerize&utm_medium=affiliate&utm_campaign=skimlinks_phg'><img src = './assets/media/italy/frozen_dessert.png'></a>
+                            <img src = './assets/media/italy/frozen_dessert.png'>
+                            </a>
                         </div>
 
                         <div class = 'dish'>
@@ -268,7 +309,7 @@
                             <a href = 'https://food52.com/recipes/18223-chicken-cacciatore?clickref=1011lzWRcnfU&utm_source=partnerize&utm_medium=affiliate&utm_campaign=skimlinks_phg'><img src = './assets/media/italy/chicken_cacciatore.png'></a>
                         </div>
 
-                        <div class = 'dish' style = 'align-items: center;justify-content: center;'>
+                        <div class = 'dish' >
                             <h3>White Clam Pizza</h3>
                             <a href = 'https://food52.com/recipes/15488-white-clam-pizza?clickref=1100lzQpyMxz&utm_source=partnerize&utm_medium=affiliate&utm_campaign=skimlinks_phg'><img src = './assets/media/italy/white_clam_pizza.png'></a>
                         </div>
@@ -280,6 +321,13 @@
                             <br>Checkout them out:</p>
                             <a href = 'japan.html' class = 'recommendation'><img src = './assets/media/italy/white_clam_pizza.png'><span>Did you know that ...? Find this and more on this website!</span></a>
                             <a href = 'india.html' class = 'recommendation'><img src = './assets/media/italy/white_clam_pizza.png'><span>India - is ... Click to know more!</span></a>
+                    </div>
+                    <div class = 'like_section'>
+                        <p>Don't forget to press the like button and to share this post to your friends!</p>
+                        <button class = 'like'><img src = './assets/media/italy/like.png'></button>
+                    </div>
+                    <div class = "end">
+                        <p>Number of likes: 25<br>Views: 63</p>
                     </div>
                 </div>
             </div>
