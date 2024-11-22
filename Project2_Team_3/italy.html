@@ -31,15 +31,20 @@
                 flex: 1;
                 text-align: center;
                 justify-content: center;
+                color: white;
+                font-size: 1.6em;
+                font-weight: bold;
+                font-family: Arial, Helvetica, sans-serif;
             }
             .navbar a:hover{
-                background-color: rgb(0, 101, 0);
+                background-color: darkred;
             }
             .navbar{
-                background-color: darkred;
+                background-color: rgba(139, 0, 0, 0.65) ;
                 position: sticky;
                 top: 0;
                 height: 10vh;
+                z-index: 100;
             }
             .header img{
                 height: 90vh;
@@ -56,8 +61,11 @@
                 font-size: 1.3em;
                 line-height: 1.6;
                 align-self: center;
-                background-color: lightgreen;
+                background-color: #F4F9FF;
                 padding: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1.3em;
+                line-height: 1.6;
             }
             .grid{
                 display:grid;
@@ -73,14 +81,24 @@
                 text-align: justify;
             }
             .grid p:hover{
-                background-color: red;
-                transform: scale(1.05);
+                background-color: darkred;
+                transform: scale(1.03);
                 transition: all 0.3s ease;
             }
+            .dish{
+                background-color: darkred;
+                width: fit-content;
+                height: fit-content;
+                margin: 0;
+                padding: 0;
+                position: relative;
+            }
             .dish img{
-                width: 60%;
+                width: 100%;
                 align-self: center;
                 border-radius: 10px;
+                margin: 0;
+                padding: 0;
             }
             .recommendation{
                 background-color: aliceblue;
@@ -93,15 +111,15 @@
             .recommendation img{
                 width: 50%;
             }
+
             /* footer styles */
             footer {
                 width: 100%;
-                background-color: #8c0000;
+                background-color: darkred;
                 color: #f1f1f1;
                 padding: 2rem 0;
                 font-family: Arial, sans-serif;
             }
-            
             .footer-container {
                 display: flex;
                 flex-wrap: wrap;
@@ -138,16 +156,94 @@
                 background-color: #b5e7a0;
                 color: #023002;
             }
-
+            .carousel .flex .dish{
+                border: 1px solid blue;
+                padding: 10px;
+                border-radius: 50px;
+                flex: 1;
+            }
+            .arrow{
+                background-color: rgba(0, 255, 0, 0.903);
+                flex: 1;
+                max-width: 3vw;
+                justify-content: center;
+                align-self: center;
+            }
+            #default{
+                display: flex;
+            }
+            #margarita, #lasagna, #fettucini{
+                display: none;
+            }
+            #margarita:target, #lasagna:target, #fettucini:target{
+                display: flex;
+            }
+            .carousel div[id]:target ~ #default{
+                display: none;
+            }
+            .recommendation{
+                height: 5vh;
+            }
+            .container .dish{
+                border: 1px solid black;
+                justify-content: center;
+                align-items: center;
+                flex:1;
+                display: flex;
+                flex-direction: column;
+                padding: 5px;
+            }
+            .container{
+                gap:5px;
+            }
+            .container .dish a{
+                justify-content: center;
+                align-items: center;
+                flex:1;
+            }
+            .like{
+                animation: moveAndChangeColor 1s infinite;
+                width: 10%;
+                height: auto;
+            }
+            @keyframes moveAndChangeColor {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(-10deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+            }
+            .end{
+                text-align: right;                
+            }
+            .text_above_dish{
+                position: absolute;
+                color: white;
+                opacity: 0;
+                transition: opacity 0.3s;
+                z-index: 2;
+                width: fit-content;
+            }
+            .container .dish a:hover .text_above_dish{
+                opacity: 1;
+            }
+            .container .dish a:hover img {
+                opacity: 0.6;
+            }
         </style>
     </head>
     <body>
+
         <div class = 'flex column'>
-            <div class="header">
+            <div class = 'header'>
                 <h1 style="position: absolute; top: 50px; left: 50%; transform: translateX(-50%); color: white; 
                 font-size: 4em; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); z-index: 2;">Italian Cuisine</h1>
-                <img src="./assets/media/italy/italyheader.avif" class="main-pic">
+                <img src = './assets/media/italy/italyheader.avif' class = 'main-pic'>
             </div>
             
             
@@ -159,85 +255,132 @@
                     <a href = 'india.html'>India</a>
                     <a href = 'references.html'>Reference</a>
                 </div>
+                <div class = 'flex row'>
+                    <div style = 'background-color: #008C45; width: 10%;'></div>
+                    <div class = 'content flex column'>
+                        <h1>What does italian cuisine look like?</h1>
+                        <p>By: Anonymous User<br>Est. time to read: 5 mins</p>
+                        <p>We were lucky in that the appliances in the home had been recently replaced and I liked them.  I had specific needs for appliances - I wanted a large side-by-side fridge, two ovens and a 6-burner range.  And this house had all of those.   That was lucky because of all the backordered appliances during Covid, so I got to avoid that frustration. </p>
+                        <img src = './assets/media/italy/dishes.png'>
+                        <h2>Why italian cuisine is so tasty?</h2>
+                        <div class = 'grid'>
+                            <p>
+                            1. Fresh, Quality Ingredients:<br>
+                            The foundation of Italian cuisine lies in the use of fresh, high quality ingredients. From San Marzano tomatoes to extra virgin olive oil, Italian cuisine focuses on simple but tasty ingredients. The quality of the ingredients is essential to create authentic and delicious dishes.</p>
 
-                <div class = 'content'>
-                    <h1>What does italian cuisine look like?</h1>
-                    <p>By: Anonymous User<br>Est. time to read: 5 mins</p>
-                    <p>We were lucky in that the appliances in the home had been recently replaced and I liked them.  I had specific needs for appliances - I wanted a large side-by-side fridge, two ovens and a 6-burner range.  And this house had all of those.   That was lucky because of all the backordered appliances during Covid, so I got to avoid that frustration. </p>
-                    <img src = './assets/media/italy/dishes.png'>
-                    <h2>Why italian cuisine is so tasty?</h2>
-                    <div class = 'grid'>
-                        <p>
-                        1. Fresh, Quality Ingredients:<br>
-                        The foundation of Italian cuisine lies in the use of fresh, high quality ingredients. From San Marzano tomatoes to extra virgin olive oil, Italian cuisine focuses on simple but tasty ingredients. The quality of the ingredients is essential to create authentic and delicious dishes.</p>
+                            <p>2. Simplicity and Simplicity:<br>
+                            Italian cuisine is characterised by its simplicity. Italian dishes tend to have few ingredients, allowing the natural flavours to shine through. Al dente pasta with a fresh tomato and basil sauce or an authentic margherita pizza are perfect examples of this simplicity that brings out the flavours.</p>
 
-                        <p>2. Simplicity and Simplicity:<br>
-                        Italian cuisine is characterised by its simplicity. Italian dishes tend to have few ingredients, allowing the natural flavours to shine through. Al dente pasta with a fresh tomato and basil sauce or an authentic margherita pizza are perfect examples of this simplicity that brings out the flavours.</p>
+                            <p>3. Regional Variety:<br>
+                            Italy is known for its culinary diversity, and each region has its own repertoire of traditional dishes. From risotto in the north to fresh pasta in the centre and fish in the south, each region brings its own unique ingredients and culinary techniques.</p>
 
-                        <p>3. Regional Variety:<br>
-                        Italy is known for its culinary diversity, and each region has its own repertoire of traditional dishes. From risotto in the north to fresh pasta in the centre and fish in the south, each region brings its own unique ingredients and culinary techniques.</p>
+                            <p>4. Love for Local Products:<br>
+                            Italians have a deep love for local and seasonal produce. This is reflected in the freshness of ingredients and the importance of consuming products from the region. Local markets are an integral part of the Italian culinary experience.</p>
 
-                        <p>4. Love for Local Products:<br>
-                        Italians have a deep love for local and seasonal produce. This is reflected in the freshness of ingredients and the importance of consuming products from the region. Local markets are an integral part of the Italian culinary experience.</p>
+                            <p>5. Tradition and Family:<br>
+                            Italian food is all about tradition and family. Many recipes have been passed down from generation to generation, and meals are often moments of family togetherness and celebration.</p>
+                            <p>6. Focus on Experience:<br>
+                            Italian food is not just about eating, but about enjoying a complete experience. Eating is a social act, and Italians value the time spent together at the table, sharing laughter and conversation.</p>
+                        </div>
 
-                        <p>5. Tradition and Family:<br>
-                        Italian food is all about tradition and family. Many recipes have been passed down from generation to generation, and meals are often moments of family togetherness and celebration.</p>
-                        <p>6. Focus on Experience:<br>
-                        Italian food is not just about eating, but about enjoying a complete experience. Eating is a social act, and Italians value the time spent together at the table, sharing laughter and conversation.</p>
+                        <div class = 'carousel'>
+                            <h2>Popular italian dishes</h2>
+                            <div class = 'flex' id = 'margarita'>
+                                <a href = "#default" class = 'arrow'><</a>
+                                <div class = 'dish'>
+                                        <h3>Margarita</h3>
+                                        <img src = './assets/media/italy/margarita.png'>
+                                        <p>The first thing that comes to mind when you think of Italian cuisine is undoubtedly pizza. Pizzas, made with a variety of ingredients, offer an option to satisfy every palate. Pizza, considered the most important dish in Italy, plays a big role in the country's cuisine, even though it is known as fast food in the world.
+                                        <br>The most frequently preferred pizza recipe in Italy is Margarita, and it is consumed all over the world with its light structure and taste that appeals to every taste.
+                                        <br>Prepared in a very practical way, Margarita contains flour, olive oil, water, dry yeast, salt, granulated sugar, tomatoes, oregano, basil, and mozzarella cheese. Considering its ingredients, pizza is also a suitable choice for a vegetarian diet, and it is a filling option.</p>
+                                </div>
+                            <a href = "#lasagna" class = 'arrow'><img src = './assets/media/italy/arrow_right.png'></a>
+                            </div>
+
+                            <div class = 'flex' id = 'lasagna'>
+                                <a href = "#margarita" class = 'arrow'><</a>
+                                <div class = 'dish' >
+                                    <h3>Lasagna</h3>
+                                    <img src = './assets/media/italy/lasagna.png'>
+                                    <p>Lasagne, which originated in Bologna, Italy, is an Italian dish that is among the local flavours of the country. It is also considered a type of pasta dish and is prepared with different methods and ingredients.
+                                        Lasagna typically contains lasagna sheets, ground meat, onions, tomatoes, tomato paste, olive oil, garlic, salt, butter, milk, flour, black pepper, and Parmesan cheese. The meat, tomato sauce, and special dough are prepared and baked in the oven, topped with béchamel sauce and cheese.</p>
+                                </div>
+                                <a href = "#fettucini" class = 'arrow'>></a> 
+                            </div>
+
+                            <div class = 'flex' id = 'fettucini'>
+                                <a href = "#lasagna" class = 'arrow'><</a>
+                                <div class = 'dish'>
+                                    <h3>Fettucini Alfredo</h3>
+                                    <img src = './assets/media/italy/fettucini_alfredo.png'>
+                                    <p>Fettuccine Alfredo is a type of pasta unique to Italy, made with ingredients such as butter, Parmesan cheese, chicken breast, mushrooms, olive oil, cream, basil, garlic, and black pepper.
+
+                                        The inventor of the dish, which appeared in a restaurant in Rome at the beginning of the 20th century, is Alfredo Di Lelio. Although cream and chicken are not used in the first recipe, this unique flavor, which has spread around the world over time, is made with different techniques and ingredients.
+                                        
+                                        Fettucini Alfredo, which manages to attract attention with its soft texture, lingering flavour, and satisfying feature, is among the favourite dishes that you can find in almost every restaurant.</p>
+                                </div>
+                            </div>
+
+                            <div class = 'flex' id = 'default'>
+                                <div class = 'dish'>
+                                    <h3>Check out popular dishes by using arrows!</h3>
+                                </div>
+                                <a href = '#margarita' class = 'arrow'>></a>
+                            </div>
+
+                        </div>
+
+
+                        <h2>Not popular italian dishes to cook at home</h2>
+                        <div class = 'container flex row'>
+                            <div class = 'dish'>
+                                <a href = 'https://food52.com/recipes/30430-gianduia-semifreddo-chocolate-hazelnut-frozen-dessert?clickref=1100lzQpytTr&utm_source=partnerize&utm_medium=affiliate&utm_campaign=skimlinks_phg'>
+                                    <div class = 'text_above_dish'>
+                                        <h3>Gianduia Semifreddo (Chocolate-Hazelnut Frozen Dessert)</h3>
+                                        <p>This semifreddo is inspired by the delicious combination of chocolate and hazelnut that the Piedmont region is so well known for. Because of the ground hazelnuts and melted chocolate, the semifreddo holds its shape really well, remaining sliceable for quite some time after removing it from the freezer. For extra flavor, feel free to drizzle it with some chocolate sauce and garnish it with chopped, toasted hazelnuts.</p>
+                                    </div>
+                                    <img src = './assets/media/italy/frozen_dessert.png'>
+                                </a>
+                            </div>
+
+                            <div class = 'dish'>
+                                <a href = 'https://food52.com/recipes/18223-chicken-cacciatore?clickref=1011lzWRcnfU&utm_source=partnerize&utm_medium=affiliate&utm_campaign=skimlinks_phg'>
+                                    <div class = 'text_above_dish'>
+                                        <h3>Chicken Cacciatore</h3>
+                                        <p>I couldn't take it anymore. With the weather so warm here for the last couple of weeks, we've been eating salads and quick-grilled meats...tuna and a lot of sandwiches. But I wanted something cooked, something comforting. The other night we caught a few minutes of Bobby Flay doing a throw-down for chicken cacciatore. I knew that's what I wanted, and so it went.</p>
+                                    </div>
+                                    <img src = './assets/media/italy/chicken_cacciatore.png'>
+                                </a>
+                            </div>
+
+                            <div class = 'dish'>
+                                <a href = 'https://food52.com/recipes/15488-white-clam-pizza?clickref=1100lzQpyMxz&utm_source=partnerize&utm_medium=affiliate&utm_campaign=skimlinks_phg'>
+                                    <div class = 'text_above_dish'>
+                                        <h3>White Clam Pizza</h3>
+                                        <p>Inspired by a visit to Frank Pepe's in New Haven a couple years ago, I recreated their magically delicious pie at home with amazing results. Get yourself some really fresh littleneck clams and shuck them yourself, or ask your nice fishmonger to shuck 'em. I yanked a handful of the remaining oregano from the back deck herb boxes, but I think dried would work just as well. If you like clams, and you like pizza, you just might enjoy this combo. The pizza dough recipe is adapted from The Silver Spoon, one of my favorite cookbooks. Here's how my mom and dad taught me to prepare clams: the day before you plan on eating them, cover the scrubbed clams in salted water and sprinkle in a few spoonfuls of cornmeal. Stash in the fridge. The clams will eat the cornmeal and expel any sand. </p>
+                                    </div>
+                                    <img src = './assets/media/italy/white_clam_pizza.png'>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class = 'recommendations'>
+                            <p>Thank you for reading my blog! If you find the information here interesting, you may also like posts of my colleagues!
+                                <br>Checkout them out:</p>
+                                <a href = 'japan.html' class = 'recommendation'><img src = './assets/media/italy/white_clam_pizza.png'><span>Did you know that ...? Find this and more on this website!</span></a>
+                                <a href = 'india.html' class = 'recommendation'><img src = './assets/media/italy/white_clam_pizza.png'><span>India - is ... Click to know more!</span></a>
+                        </div>
+                        <div class = 'like_section'>
+                            <p>Don't forget to press the like button and to share this post to your friends!</p>
+                            <button class = 'like'><img src = './assets/media/italy/like.png'></button>
+                        </div>
+                        <div class = "end">
+                            <p><b>Number of likes:</b> 25<br><b>Views:</b> 63</p>
+                        </div>
                     </div>
-                    <h2>Popular italian dishes</h2>
-                    <div class = 'dish'>
-                        <h3>Margarita</h3>
-                        <img src = './assets/media/italy/margarita.png'>
-                        <p>The first thing that comes to mind when you think of Italian cuisine is undoubtedly pizza. Pizzas, made with a variety of ingredients, offer an option to satisfy every palate. Pizza, considered the most important dish in Italy, plays a big role in the country's cuisine, even though it is known as fast food in the world.
-
-                            <br>The most frequently preferred pizza recipe in Italy is Margarita, and it is consumed all over the world with its light structure and taste that appeals to every taste.
-                            
-                            <br>Prepared in a very practical way, Margarita contains flour, olive oil, water, dry yeast, salt, granulated sugar, tomatoes, oregano, basil, and mozzarella cheese. Considering its ingredients, pizza is also a suitable choice for a vegetarian diet, and it is a filling option.</p>
-                    </div>
-                    <div class = 'dish'>
-                        <h3>Lasagna</h3>
-                        <img src = './assets/media/italy/lasagna.png'>
-                        <p>Lasagne, which originated in Bologna, Italy, is an Italian dish that is among the local flavours of the country. It is also considered a type of pasta dish and is prepared with different methods and ingredients.
-
-                            Lasagna typically contains lasagna sheets, ground meat, onions, tomatoes, tomato paste, olive oil, garlic, salt, butter, milk, flour, black pepper, and Parmesan cheese. The meat, tomato sauce, and special dough are prepared and baked in the oven, topped with béchamel sauce and cheese.</p>
-                    </div>
-                    <div class = 'dish'>
-                        <h3>Fettucini Alfredo</h3>
-                        <img src = './assets/media/italy/fettucini_alfredo.png'>
-                        <p>Fettuccine Alfredo is a type of pasta unique to Italy, made with ingredients such as butter, Parmesan cheese, chicken breast, mushrooms, olive oil, cream, basil, garlic, and black pepper.
-
-                            The inventor of the dish, which appeared in a restaurant in Rome at the beginning of the 20th century, is Alfredo Di Lelio. Although cream and chicken are not used in the first recipe, this unique flavor, which has spread around the world over time, is made with different techniques and ingredients.
-                            
-                            Fettucini Alfredo, which manages to attract attention with its soft texture, lingering flavour, and satisfying feature, is among the favourite dishes that you can find in almost every restaurant.</p>
-                    </div>
-                    <h2>Not popular italian dishes to cook at home</h2>
-                    
-                    <div class = 'dish'>
-                        <h3>Gianduia Semifreddo (Chocolate-Hazelnut Frozen Dessert)</h3>
-                        <img src = './assets/media/italy/frozen_dessert.png'>
-                        <a href = 'https://food52.com/recipes/30430-gianduia-semifreddo-chocolate-hazelnut-frozen-dessert?clickref=1100lzQpytTr&utm_source=partnerize&utm_medium=affiliate&utm_campaign=skimlinks_phg'>Recipe</a>
-                    </div>
-                    <div class = 'dish'>
-                        <h3>Chicken Cacciatore</h3>
-                        <img src = './assets/media/italy/chicken_cacciatore.png'>
-                        <a href = 'https://food52.com/recipes/18223-chicken-cacciatore?clickref=1011lzWRcnfU&utm_source=partnerize&utm_medium=affiliate&utm_campaign=skimlinks_phg'>Recipe</a>
-                    </div>
-                    <div class = 'dish'>
-                        <h3>White Clam Pizza</h3>
-                        <img src = './assets/media/italy/white_clam_pizza.png'>
-                        <a href = 'https://food52.com/recipes/15488-white-clam-pizza?clickref=1100lzQpyMxz&utm_source=partnerize&utm_medium=affiliate&utm_campaign=skimlinks_phg'>Recipe</a>
-                    </div>
-
-                    <div class = 'recommendations'>
-                        <p>Thank you for reading my blog! If you find the information here interesting, you may also like posts of my colleagues!
-                            <br>Checkout them out:</p>
-                            <a href = 'japan.html' class = 'recommendation'><img src = './assets/media/italy/white_clam_pizza.png'><span>Did you know that ...? Find this and more on this website!</span></a>
-                            <a href = 'india.html' class = 'recommendation'><img src = './assets/media/italy/white_clam_pizza.png'><span>India - is ... Click to know more!</span></a>
-                    </div>
-                </div>
+                    <div style = 'background-color: #CD212A; width: 10%;'></div>
             </div>
-
             <footer>
                 <div class="footer-container">
                   <div class="footer-about">
