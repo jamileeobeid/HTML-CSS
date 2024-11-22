@@ -2,262 +2,18 @@
     ITALIAN CUISINE PAGE
     JAMILE LEEN DINGMUKHAMMED 
 -->
-
-<html>
+<html lang="en">
     <head>
-        <style>
-            body{
-                margin: 0;
-                padding: 0;
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            }
-            .flex{
-                display: flex;
-            }
-            .row{
-                flex-direction: row;
-            }
-            .column{
-                flex-direction: column;
-            }
-            .navbar a{
-                line-height: 10vh;
-                text-decoration: none;
-                color: white;
-                font-size: 1.6em;
-                font-weight: bold;
-                font-family: Arial, Helvetica, sans-serif;
-                padding: 5px;
-                flex: 1;
-                text-align: center;
-                justify-content: center;
-                color: white;
-                font-size: 1.6em;
-                font-weight: bold;
-                font-family: Arial, Helvetica, sans-serif;
-            }
-            .navbar a:hover{
-                background-color: darkred;
-            }
-            .navbar{
-                background-color: rgba(139, 0, 0, 0.65) ;
-                position: sticky;
-                top: 0;
-                height: 10vh;
-                z-index: 100;
-            }
-            .header img{
-                height: 90vh;
-                max-width: none;
-                overflow: hidden;
-            }
-            img{
-                width: 100%;
-                height: auto;
-            }
-            .content{
-                width: 80%;
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 1.3em;
-                line-height: 1.6;
-                align-self: center;
-                background-color: #F4F9FF;
-                padding: 20px;
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 1.3em;
-                line-height: 1.6;
-            }
-            .grid{
-                display:grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: auto auto auto;
-                gap:10px;
-            }
-            .grid p{
-                background-color: green;
-                padding: 10px;
-                border-radius: 10px;
-                margin: 0;
-                text-align: justify;
-            }
-            .grid p:hover{
-                background-color: darkred;
-                transform: scale(1.03);
-                transition: all 0.3s ease;
-            }
-            .dish{
-                background-color: darkred;
-                width: fit-content;
-                height: fit-content;
-                margin: 0;
-                padding: 0;
-                position: relative;
-            }
-            .dish img{
-                width: 100%;
-                align-self: center;
-                border-radius: 10px;
-                margin: 0;
-                padding: 0;
-            }
-            .recommendation{
-                background-color: aliceblue;
-                text-decoration: none;
-                color: black;
-                display: flex;
-                border: 1px solid black;
-                margin-bottom: 10px;
-            }
-            .recommendation img{
-                width: 50%;
-            }
-
-            /* footer styles */
-            footer {
-                width: 100%;
-                background-color: darkred;
-                color: #f1f1f1;
-                padding: 2rem 0;
-                font-family: Arial, sans-serif;
-            }
-            .footer-container {
-                display: flex;
-                flex-wrap: wrap;
-                max-width: 100%;
-                margin: 0 auto;
-                padding: 0 2rem;
-            }
-            .footer-container > div {
-                flex: 1;
-                min-width: 200px;
-                margin-bottom: 1.5rem;
-            }
-            .footer-about p {
-                font-size:1rem;
-                color: #f1f1f1;
-                line-height: 1.5;
-            }
-            .footer-contact p {
-                font-size: 1rem;
-                margin: 0.3rem 0;
-                color: #f1f1f1;
-            }
-            .footer-contact p:hover {
-                color: #b5e7a0;
-            }
-            .footer-bottom {
-                text-align: center;
-                padding: 1rem;
-                background-color: #ccc;
-                font-size: 0.9rem;
-                color: #023002;
-            }  
-            .footer-bottom:hover {
-                background-color: #b5e7a0;
-                color: #023002;
-            }
-            .carousel .flex .dish{
-                padding: 10px;
-                border-radius: 50px;
-                flex: 1;
-                margin: 100px;
-                padding: 20px;
-            }
-            .arrow{
-                background-color: lightgray;
-                flex: 1;
-                max-width: 3vw;
-                justify-content: center;
-                align-self: center;
-                border-radius: 10px;
-            }
-            #default{
-                display: flex;
-            }
-            #margarita, #lasagna, #fettucini{
-                display: none;
-            }
-            #margarita:target, #lasagna:target, #fettucini:target{
-                display: flex;
-            }
-            .carousel div[id]:target ~ #default{
-                display: none;
-            }
-            .recommendation{
-                height: 100px;
-            }
-            .recommendation img{
-                width: 20%;
-
-            }
-            .recommendation:hover{
-                background-color: lightgray;
-                transition: all 0.3s ease;
-            }
-
-            .container .dish{
-                border: 1px solid black;
-                justify-content: center;
-                align-items: center;
-                flex:1;
-                display: flex;
-                flex-direction: column;
-                padding: 5px;
-            }
-            .container{
-                gap:5px;
-            }
-            .container .dish a{
-                justify-content: center;
-                align-items: center;
-                flex:1;
-            }
-            .like{
-                animation: moveAndChangeColor 1s infinite;
-                width: 10%;
-                height: auto;
-            }
-            @keyframes moveAndChangeColor {
-            0% {
-                transform: rotate(0deg);
-            }
-            50% {
-                transform: rotate(-10deg);
-            }
-            100% {
-                transform: rotate(0deg);
-            }
-            }
-            .end{
-                text-align: right;                
-            }
-            .text_above_dish{
-                position: absolute;
-                color: white;
-                opacity: 0;
-                transition: opacity 0.3s;
-                z-index: 2;
-                width: fit-content;
-            }
-            .text_above_dish h3,p{
-                margin:0;
-                font-size: 1em;
-            }
-            .container .dish a:hover .text_above_dish{
-                opacity: 1;
-            }
-            .container .dish a:hover img {
-                opacity: 0.6;
-            }
-        </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Italian Cuisine</title>
+        <link rel = 'stylesheet' href = './assets/CSS/italy.css'>
     </head>
     <body>
 
         <div class = 'flex column'>
             <div class = 'header'>
-                <h1 style="position: absolute; top: 50px; left: 50%; transform: translateX(-50%); color: white; 
-                font-size: 4em; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); z-index: 2;">Italian Cuisine</h1>
+                <h1>Italian Cuisine</h1>
                 <img src = './assets/media/italy/italyheader.avif' class = 'main-pic'>
             </div>
             
@@ -275,7 +31,7 @@
                     <div class = 'content flex column'>
                         <h1>What does italian cuisine look like?</h1>
                         <p>By: <i>Anonymous User</i><br>Est. time to read: <b>5 minutes</b></p>
-                        <p>We were lucky in that the appliances in the home had been recently replaced and I liked them.  I had specific needs for appliances - I wanted a large side-by-side fridge, two ovens and a 6-burner range.  And this house had all of those.   That was lucky because of all the backordered appliances during Covid, so I got to avoid that frustration. </p>
+                        <p>When we think of Italian cuisine, images of rich flavors, fresh ingredients, and time-honored cooking traditions come to mind. From the rustic charm of a wood-fired pizza to the delicate layers of a handmade pasta, Italian food is not just about taste, but an experience that reflects the heart of Italy itself. But what does Italian cuisine really look like, and how do its regional differences shape the dishes that define the country’s culinary identity? In this post, we’ll explore the varied, colorful, and flavorful landscape of Italian cuisine, from its iconic dishes to the lesser-known regional specialties.</p>
                         
                         <h2>Why italian cuisine is so tasty?</h2>
                         <div class = 'grid'>
@@ -309,7 +65,7 @@
                                         <br>The most frequently preferred pizza recipe in Italy is Margarita, and it is consumed all over the world with its light structure and taste that appeals to every taste.
                                         <br>Prepared in a very practical way, Margarita contains flour, olive oil, water, dry yeast, salt, granulated sugar, tomatoes, oregano, basil, and mozzarella cheese. Considering its ingredients, pizza is also a suitable choice for a vegetarian diet, and it is a filling option.</p>
                                 </div>
-                            <a href = "#lasagna" class = 'arrow'><img src = './assets/media/italy/arrow_right.png'></a>
+                                <a href = "#lasagna" class = 'arrow'><img src = './assets/media/italy/arrow_right.png'></a>
                             </div>
 
                             <div class = 'flex' id = 'lasagna'>
@@ -404,7 +160,7 @@
                     <p style="line-height: 1.5">We're students at RIT, passionate about uncovering the stories behind everyday ingredients. 
                         Join us as we explore how simple foods transform into culinary staples across different cultures.</p>
                   </div>
-                  <div></div>
+
                   <div class="footer-contact">
                     <h2 style="line-height: 1.2;">Contact Us</h2>
                     <p style="line-height: 1.2;">Email: <a href="jo4065@g.rit.edu">Email 1</a>
@@ -420,10 +176,6 @@
                   <p>&copy; ISTE140 Project 2 Team 3. All rights reserved.</p>
                 </div>
             </footer>
-              
-        </div>
-    </body>
-</html>
         </div>
     </body>
 </html>
