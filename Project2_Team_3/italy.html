@@ -151,17 +151,19 @@
                 color: #023002;
             }
             .carousel .flex .dish{
-                border: 1px solid blue;
                 padding: 10px;
                 border-radius: 50px;
                 flex: 1;
+                margin: 100px;
+                padding: 20px;
             }
             .arrow{
-                background-color: rgba(0, 255, 0, 0.903);
+                background-color: lightgray;
                 flex: 1;
                 max-width: 3vw;
                 justify-content: center;
                 align-self: center;
+                border-radius: 10px;
             }
             #default{
                 display: flex;
@@ -176,8 +178,17 @@
                 display: none;
             }
             .recommendation{
-                height: 5vh;
+                height: 100px;
             }
+            .recommendation img{
+                width: 20%;
+
+            }
+            .recommendation:hover{
+                background-color: lightgray;
+                transition: all 0.3s ease;
+            }
+
             .container .dish{
                 border: 1px solid black;
                 justify-content: center;
@@ -222,6 +233,10 @@
                 z-index: 2;
                 width: fit-content;
             }
+            .text_above_dish h3,p{
+                margin:0;
+                font-size: 1em;
+            }
             .container .dish a:hover .text_above_dish{
                 opacity: 1;
             }
@@ -252,9 +267,9 @@
                     <div style = 'background-color: #008C45; width: 10%;'></div>
                     <div class = 'content flex column'>
                         <h1>What does italian cuisine look like?</h1>
-                        <p>By: Anonymous User<br>Est. time to read: 5 mins</p>
+                        <p>By: <i>Anonymous User</i><br>Est. time to read: <b>5 minutes</b></p>
                         <p>We were lucky in that the appliances in the home had been recently replaced and I liked them.  I had specific needs for appliances - I wanted a large side-by-side fridge, two ovens and a 6-burner range.  And this house had all of those.   That was lucky because of all the backordered appliances during Covid, so I got to avoid that frustration. </p>
-                        <img src = './assets/media/italy/dishes.png'>
+                        
                         <h2>Why italian cuisine is so tasty?</h2>
                         <div class = 'grid'>
                             <p>
@@ -279,7 +294,7 @@
                         <div class = 'carousel'>
                             <h2>Popular italian dishes</h2>
                             <div class = 'flex' id = 'margarita'>
-                                <a href = "#default" class = 'arrow'><</a>
+                                <a href = "#default" class = 'arrow'><img src = './assets/media/italy/arrow_left.png'></a>
                                 <div class = 'dish'>
                                         <h3>Margarita</h3>
                                         <img src = './assets/media/italy/margarita.png'>
@@ -291,18 +306,18 @@
                             </div>
 
                             <div class = 'flex' id = 'lasagna'>
-                                <a href = "#margarita" class = 'arrow'><</a>
+                                <a href = "#margarita" class = 'arrow'><img src = './assets/media/italy/arrow_left.png'></a>
                                 <div class = 'dish' >
                                     <h3>Lasagna</h3>
                                     <img src = './assets/media/italy/lasagna.png'>
                                     <p>Lasagne, which originated in Bologna, Italy, is an Italian dish that is among the local flavours of the country. It is also considered a type of pasta dish and is prepared with different methods and ingredients.
                                         Lasagna typically contains lasagna sheets, ground meat, onions, tomatoes, tomato paste, olive oil, garlic, salt, butter, milk, flour, black pepper, and Parmesan cheese. The meat, tomato sauce, and special dough are prepared and baked in the oven, topped with béchamel sauce and cheese.</p>
                                 </div>
-                                <a href = "#fettucini" class = 'arrow'>></a> 
+                                <a href = "#fettucini" class = 'arrow'><img src = './assets/media/italy/arrow_right.png'></a> 
                             </div>
 
                             <div class = 'flex' id = 'fettucini'>
-                                <a href = "#lasagna" class = 'arrow'><</a>
+                                <a href = "#lasagna" class = 'arrow'><img src = './assets/media/italy/arrow_left.png'></a>
                                 <div class = 'dish'>
                                     <h3>Fettucini Alfredo</h3>
                                     <img src = './assets/media/italy/fettucini_alfredo.png'>
@@ -317,8 +332,9 @@
                             <div class = 'flex' id = 'default'>
                                 <div class = 'dish'>
                                     <h3>Check out popular dishes by using arrows!</h3>
+                                    <img src = './assets/media/italy/dishes.png'>
                                 </div>
-                                <a href = '#margarita' class = 'arrow'>></a>
+                                <a href = '#margarita' class = 'arrow'><img src = './assets/media/italy/arrow_right.png'></a>
                             </div>
 
                         </div>
@@ -330,7 +346,7 @@
                                 <a href = 'https://food52.com/recipes/30430-gianduia-semifreddo-chocolate-hazelnut-frozen-dessert?clickref=1100lzQpytTr&utm_source=partnerize&utm_medium=affiliate&utm_campaign=skimlinks_phg'>
                                     <div class = 'text_above_dish'>
                                         <h3>Gianduia Semifreddo (Chocolate-Hazelnut Frozen Dessert)</h3>
-                                        <p>This semifreddo is inspired by the delicious combination of chocolate and hazelnut that the Piedmont region is so well known for. Because of the ground hazelnuts and melted chocolate, the semifreddo holds its shape really well, remaining sliceable for quite some time after removing it from the freezer. For extra flavor, feel free to drizzle it with some chocolate sauce and garnish it with chopped, toasted hazelnuts.</p>
+                                        <p>This semifreddo, inspired by Piedmont's famous chocolate-hazelnut combo, holds its shape well thanks to ground hazelnuts and melted chocolate. Serve with chocolate sauce and toasted hazelnuts for extra flavor.</p>
                                     </div>
                                     <img src = './assets/media/italy/frozen_dessert.png'>
                                 </a>
@@ -340,7 +356,7 @@
                                 <a href = 'https://food52.com/recipes/18223-chicken-cacciatore?clickref=1011lzWRcnfU&utm_source=partnerize&utm_medium=affiliate&utm_campaign=skimlinks_phg'>
                                     <div class = 'text_above_dish'>
                                         <h3>Chicken Cacciatore</h3>
-                                        <p>I couldn't take it anymore. With the weather so warm here for the last couple of weeks, we've been eating salads and quick-grilled meats...tuna and a lot of sandwiches. But I wanted something cooked, something comforting. The other night we caught a few minutes of Bobby Flay doing a throw-down for chicken cacciatore. I knew that's what I wanted, and so it went.</p>
+                                        <p>"I was done with salads and sandwiches. After seeing Bobby Flay’s chicken cacciatore throwdown, I craved something comforting—so I made it."</p>
                                     </div>
                                     <img src = './assets/media/italy/chicken_cacciatore.png'>
                                 </a>
@@ -350,7 +366,7 @@
                                 <a href = 'https://food52.com/recipes/15488-white-clam-pizza?clickref=1100lzQpyMxz&utm_source=partnerize&utm_medium=affiliate&utm_campaign=skimlinks_phg'>
                                     <div class = 'text_above_dish'>
                                         <h3>White Clam Pizza</h3>
-                                        <p>Inspired by a visit to Frank Pepe's in New Haven a couple years ago, I recreated their magically delicious pie at home with amazing results. Get yourself some really fresh littleneck clams and shuck them yourself, or ask your nice fishmonger to shuck 'em. I yanked a handful of the remaining oregano from the back deck herb boxes, but I think dried would work just as well. If you like clams, and you like pizza, you just might enjoy this combo. The pizza dough recipe is adapted from The Silver Spoon, one of my favorite cookbooks. Here's how my mom and dad taught me to prepare clams: the day before you plan on eating them, cover the scrubbed clams in salted water and sprinkle in a few spoonfuls of cornmeal. Stash in the fridge. The clams will eat the cornmeal and expel any sand. </p>
+                                        <p>"Inspired by a visit to Frank Pepe's, I recreated their clam pizza with great results. Use fresh littleneck clams, oregano, and a dough recipe from The Silver Spoon. To prep clams, soak them in salted water with cornmeal overnight to remove sand." </p>
                                     </div>
                                     <img src = './assets/media/italy/white_clam_pizza.png'>
                                 </a>
@@ -361,8 +377,8 @@
                         <div class = 'recommendations'>
                             <p>Thank you for reading my blog! If you find the information here interesting, you may also like posts of my colleagues!
                                 <br>Checkout them out:</p>
-                                <a href = 'japan.html' class = 'recommendation'><img src = './assets/media/italy/white_clam_pizza.png'><span>Did you know that ...? Find this and more on this website!</span></a>
-                                <a href = 'india.html' class = 'recommendation'><img src = './assets/media/italy/white_clam_pizza.png'><span>India - is ... Click to know more!</span></a>
+                                <a href = 'japan.html' class = 'recommendation'><img src = './assets/media/italy/japan.jpg'><span>Did you know that Sushi, now a celebrated dish worldwide, was originally pickled fish preserved in vinegar before evolving into the rice-based delicacy we know today? Find this and more interesting information about Japan on this website!</span></a>
+                                <a href = 'india.html' class = 'recommendation'><img src = './assets/media/italy/india.jpg'><span>This website will give you information about the cultures that have contributed to the development of Indian cuisine. Are you sure you know all the intricacies of dishes from different regions of India?</span></a>
                         </div>
                         <div class = 'like_section'>
                             <p>Don't forget to press the like button and to share this post to your friends!</p>
