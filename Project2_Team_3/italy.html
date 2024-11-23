@@ -21,13 +21,28 @@
             
             
             <div class = 'flex column'>
-                <div class = 'navbar flex row'>
+                <!-- Desktop navbar -->
+                 <div class = 'navbar flex row desktop'> 
                     <a href = 'index.html'>Home</a>
                     <a href = 'japan.html'>Japan</a>
                     <a href = 'italy.html'>Italy</a>
                     <a href = 'india.html'>India</a>
                     <a href = 'references.html'>Reference</a>
                 </div>
+                <!-- Mobile navbar -->
+                <div class = 'navbar flex column tablet mobile'> 
+                    <details>
+                        <summary aria-label="Toggle menu">☰</summary>
+                        <ul>
+                    <li><a href = 'index.html'>Home</a></li>
+                    <li><a href = 'japan.html'>Japan</a></li>
+                    <li><a href = 'italy.html'>Italy</a></li>
+                    <li><a href = 'india.html'>India</a></li>
+                    <li><a href = 'references.html'>Reference</a></li>
+                </ul>
+                    </details>
+                </div>
+
                 <div class = 'flex row'>
                     <div style = 'background-color: #008C45; width: 10%;'></div>
                     <div class = 'content flex column'>
@@ -59,7 +74,8 @@
                         <div class = 'carousel'>
                             <h2>Popular Italian Dishes</h2>
                             <div class = 'flex' id = 'margarita'>
-                                <a href = "#default" class = 'arrow'><img src = './assets/media/italy/arrow_left.png'></a>
+                                <a href = "#default" class = 'arrow desktop'><img src = './assets/media/italy/arrow_left.png'></a>
+                                <a href = '#default' class = 'arrow mobile'><img src = './assets/media/italy/arrow_up.png'></a>
                                 <div class = 'dish'>
                                         <h3>Margarita</h3>
                                         <img src = './assets/media/italy/margarita.png'>
@@ -67,22 +83,26 @@
                                         <br>The most frequently preferred pizza recipe in Italy is Margarita, and it is consumed all over the world with its light structure and taste that appeals to every taste.
                                         <br>Prepared in a very practical way, Margarita contains flour, olive oil, water, dry yeast, salt, granulated sugar, tomatoes, oregano, basil, and mozzarella cheese. Considering its ingredients, pizza is also a suitable choice for a vegetarian diet, and it is a filling option.</p>
                                 </div>
-                                <a href = "#lasagna" class = 'arrow'><img src = './assets/media/italy/arrow_right.png'></a>
+                                <a href = "#lasagna" class = 'arrow desktop'><img src = './assets/media/italy/arrow_right.png'></a>
+                                <a href = '#lasagna' class = 'arrow mobile'><img src = './assets/media/italy/arrow_down.png'></a>
                             </div>
 
                             <div class = 'flex' id = 'lasagna'>
-                                <a href = "#margarita" class = 'arrow'><img src = './assets/media/italy/arrow_left.png'></a>
+                                <a href = "#margarita" class = 'arrow desktop'><img src = './assets/media/italy/arrow_left.png'></a>
+                                <a href = '#margarita' class = 'arrow mobile'><img src = './assets/media/italy/arrow_up.png'></a>
                                 <div class = 'dish' >
                                     <h3>Lasagna</h3>
                                     <img src = './assets/media/italy/lasagna.png'>
                                     <p>Lasagne, which originated in Bologna, Italy, is an Italian dish that is among the local flavours of the country. It is also considered a type of pasta dish and is prepared with different methods and ingredients.
                                         Lasagna typically contains lasagna sheets, ground meat, onions, tomatoes, tomato paste, olive oil, garlic, salt, butter, milk, flour, black pepper, and Parmesan cheese. The meat, tomato sauce, and special dough are prepared and baked in the oven, topped with béchamel sauce and cheese.</p>
                                 </div>
-                                <a href = "#fettucini" class = 'arrow'><img src = './assets/media/italy/arrow_right.png'></a> 
+                                <a href = "#fettucini" class = 'arrow desktop'><img src = './assets/media/italy/arrow_right.png'></a> 
+                                <a href = '#fettucini' class = 'arrow mobile'><img src = './assets/media/italy/arrow_down.png'></a>
                             </div>
 
                             <div class = 'flex' id = 'fettucini'>
-                                <a href = "#lasagna" class = 'arrow'><img src = './assets/media/italy/arrow_left.png'></a>
+                                <a href = "#lasagna" class = 'arrow desktop'><img src = './assets/media/italy/arrow_left.png'></a>
+                                <a href = '#lasagna' class = 'arrow mobile'><img src = './assets/media/italy/arrow_up.png'></a>
                                 <div class = 'dish'>
                                     <h3>Fettucini Alfredo</h3>
                                     <img src = './assets/media/italy/fettucini_alfredo.png'>
@@ -99,14 +119,15 @@
                                     <h3>Check out popular dishes by using arrows!</h3>
                                     <img src = './assets/media/italy/dishes.png'>
                                 </div>
-                                <a href = '#margarita' class = 'arrow'><img src = './assets/media/italy/arrow_right.png'></a>
+                                <a href = '#margarita' class = 'arrow desktop'><img src = './assets/media/italy/arrow_right.png'></a>
+                                <a href = '#margarita' class = 'arrow mobile'><img src = './assets/media/italy/arrow_down.png'></a>
                             </div>
 
                         </div>
 
 
                         <h2>Lesser-known Italian dishes to prepare at home</h2>
-                        <div class = 'container flex row'>
+                        <div class = 'container flex'>
                             <div class = 'dish'>
                                 <a href = 'https://food52.com/recipes/30430-gianduia-semifreddo-chocolate-hazelnut-frozen-dessert?clickref=1100lzQpytTr&utm_source=partnerize&utm_medium=affiliate&utm_campaign=skimlinks_phg'>
                                     <div class = 'text_above_dish'>
@@ -139,16 +160,18 @@
                         </div>
 
 
-                        <div class = 'recommendations' style="margin-top: 70px; margin-left: 80px;">
-                            <p style="margin-top: 20px; margin-bottom: 20px;">Thank you for reading my blog! If you find the information here interesting, you may also like posts of my colleagues!
+                        <div class = 'recommendations'>
+                            <p>Thank you for reading my blog! If you find the information here interesting, you may also like posts of my colleagues!
                                 <br>Checkout them out:</p>
                                 <a href = 'japan.html' class = 'recommendation'><img src = './assets/media/italy/japan.jpg' width="100px"><span>Did you know that Sushi, now a celebrated dish worldwide, was originally pickled fish preserved in vinegar before evolving into the rice-based delicacy we know today? Find this and more interesting information about Japan on this website!</span></a>
                                 <a href = 'india.html' class = 'recommendation'><img src = './assets/media/italy/india.jpg' width="50px"><span>This website will give you information about the cultures that have contributed to the development of Indian cuisine. Are you sure you know all the intricacies of dishes from different regions of India?</span></a>
                         </div>
-                        <div class = 'like_section' style="margin-top: 70px; margin-left: 80px;">
+
+                        <div class = 'like_section'>
                             <p>Don't forget to press the like button and to share this post to your friends!</p>
                             <button class = 'like'><img src = './assets/media/italy/like.png'></button>
                         </div>
+
                         <div class = "end">
                             <p><b>Number of likes:</b> 25<br><b>Views:</b> 63</p>
                         </div>

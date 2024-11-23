@@ -11,9 +11,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
 }
 .flex{
     display: flex;
+    gap: 0;
 }
 .row{
     flex-direction: row;
@@ -21,11 +23,17 @@
 .column{
     flex-direction: column;
 }
+h1{
+    font-size: 2rem;
+}
+h2{
+    font-size: 1.5r ;
+}
 .navbar a{
     line-height: 10vh;
     text-decoration: none;
     color: white;
-    font-size: 1.6em;
+    font-size: 1.6rem;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     padding: 5px;
@@ -33,9 +41,6 @@
     text-align: center;
     justify-content: center;
     color: white;
-    font-size: 1.6em;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
 }
 .navbar a:hover{
     background-color: darkred;
@@ -47,11 +52,15 @@
     height: 10vh;
     z-index: 100;
     margin: 0;
+    box-sizing: border-box;
 }
-.header img{
+.main-pic{
     height: 90vh;
     max-width: none;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 img{
     width: 100%;
@@ -60,7 +69,7 @@ img{
 .content{
     width: 80%;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.3em;
+    font-size: 1.3rem;
     line-height: 1.6;
     align-self: center;
     background-color: #F4F9FF;
@@ -94,6 +103,9 @@ img{
     padding: 0;
     position: relative;
 }
+.container{
+    flex-direction: row;
+}
 .container .dish{
     color: #FFD700;
 }
@@ -104,6 +116,14 @@ img{
     margin: 0;
     padding: 0;
 }
+.recommendations{
+    margin-top: 70px;
+    margin-left: 80px;
+}
+.recommendations p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 .recommendation{
     background-color: aliceblue;
     text-decoration: none;
@@ -112,6 +132,7 @@ img{
     border: 1px solid black;
     margin-bottom: 10px;
     border-radius: 20px;
+    max-width: fit-content;
 }
 .recommendation span{
     padding: 10px;
@@ -119,6 +140,7 @@ img{
 .recommendation img{
     width: 50%;
     border-radius: 20px;
+    height: auto;
 }
 
 /* footer styles */
@@ -168,7 +190,7 @@ footer {
 .carousel{
     margin-bottom: 70px;
 }
-.carousel .flex .dish{
+.carousel .dish{
     padding: 10px;
     border-radius: 50px;
     flex: 1;
@@ -233,6 +255,10 @@ footer {
     align-items: center;
     flex:1;
 }
+.like_section{
+    margin-top: 70px;
+    margin-left: 80px;
+}
 .like{
     animation: moveAndChangeColor 1s infinite;
     width: 10%;
@@ -259,10 +285,11 @@ footer {
     transition: opacity 0.3s;
     z-index: 2;
     width: fit-content;
+    padding: 5px;
 }
 .text_above_dish h3,p{
     margin:0;
-    font-size: 1em;
+    font-size: 1rem;
 }
 .container .dish a:hover .text_above_dish{
     opacity: 1;
@@ -276,7 +303,7 @@ footer {
     left: 50%; 
     transform: translateX(-50%); 
     color: white; 
-    font-size: 4em; 
+    font-size: 4rem; 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
     z-index: 2;
@@ -289,3 +316,99 @@ button{
     background: none;
     cursor:pointer;
 }
+.mobile{
+    display: none;
+}
+.tablet{
+    display: none;
+}
+li{
+    display: block;
+}
+li a{
+    display: block;
+}
+summary{
+    cursor: pointer;
+    list-style: none; /*removing the default arrow*/
+    font-size: 2.5rem;
+    text-align: center;
+}
+summary:hover{
+    background-color: darkred;
+}
+/*---------------------------------------------RESPONSIVENESS-----------------------------------------------*/
+
+/* MOBILE VIEW RESPONSIVENESS */
+@media (max-width: 500px) {
+    .desktop{
+        display: none;
+    }
+    .tablet{
+        display: block;
+    }
+    .mobile{
+        display: block;
+    }
+    .navbar{
+        height: fit-content;
+        text-align: center;
+        justify-content: center;
+    }
+    .carousel .flex{
+        flex-direction: column;
+    }
+    .arrow{
+        max-width: fit-content;
+    }
+    .arrow img{
+        width: 60px;
+        height: 50px;
+    }
+    .carousel .dish{
+        padding: 10px;
+        border-radius: 50px;
+        flex: 1;
+        padding: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .recommendation{
+        flex-direction: column;
+        margin: 0;
+        margin-top: 1rem;
+    }
+    .recommendations p {
+        margin: 0;
+    }
+    .recommendations{
+        margin: 0;
+    }
+    .recommendation img{
+        width: 100%;
+    }
+    .like_section{
+        margin-left: 0;
+    }
+    .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .main-pic{
+        width:100%;
+        height: auto;
+    }
+    .header h1{
+        font-size: 3rem;
+        width:100%;
+        text-align: center;
+    }
+}
+
+  /* TABLET VIEW RESPONSIVENESS */
+  @media (max-width: 900px) and (min-width: 501px) {
+
+  }
