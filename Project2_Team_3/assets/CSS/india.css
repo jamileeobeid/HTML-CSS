@@ -58,10 +58,19 @@ body {
     align-items: center;
     justify-content: center;
 }
-summary {
+.nav-mobile summary {
     list-style-type: none; /* removes default arrow */
     font-size: 2em;
     cursor:pointer; /* makes cursor a pointer so user knows its clickable*/
+    text-align: center;
+}
+.nav-mobile ul {
+    list-style-type: none;
+    text-align: center;
+}
+.nav-mobile li {
+    padding: 5px;
+    font-size: 1.2em;
 }
 
 /* navigation links styling + hover interactions */
@@ -87,6 +96,7 @@ summary {
     background-size: cover;
     background-position: center;
     height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
