@@ -10,8 +10,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+    box-sizing: border-box; /* accounts for margin and padding */
+    scroll-behavior: smooth; /* ensures smooth transition when target elements are clicked */
 }
   
 body {
@@ -41,14 +41,31 @@ body {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    z-index: 1000;
+    z-index: 1000; /* making sure navigation bar is on top of everything*/
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); 
     align-items: center;
     justify-content: center;
 }
 
+/*style for mobile + tablet navigation bar*/
+.nav-mobile{
+    width: 100vw; 
+    height: auto;
+    background-color: #eb7c059a;
+    display: none; /* hidden in desktop view */
+    padding: 5px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); 
+    align-items: center;
+    justify-content: center;
+}
+summary {
+    list-style-type: none; /* removes default arrow */
+    font-size: 2em;
+    cursor:pointer; /* makes cursor a pointer so user knows its clickable*/
+}
+
 /* navigation links styling + hover interactions */
-.nav a {
+.nav a, .nav-mobile a {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -58,7 +75,7 @@ body {
     transition: background-color 0.3s, transform 0.3s; 
 }
   
-.nav a:hover {
+.nav a:hover, .nav-mobile a:hover {
     background-color: #023002; 
     transform: translateX(5px); 
 }
@@ -81,14 +98,14 @@ body {
 
 /* styling to make header darker */
 .head::before {
-    content: '';
+    content: ''; /*no content just for overlay*/
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1; 
+    z-index: 1; /* overlay sits on top of header */
 }
   
 .head h2 {
@@ -105,7 +122,7 @@ body {
   
 .head h2, .head p {
     position: relative;
-    z-index: 2;
+    z-index: 2; /* text above overlay */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
 }
 
@@ -127,6 +144,7 @@ body {
 
 .history p {
     font-size: 1.3em;
+    text-align: justify; /* text takes all available space */
 }
 
 .history img {
@@ -169,28 +187,28 @@ body {
   
 .card-content {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* makes it wrap if overflow */
     gap: 20px;
     align-items: center;
 }
 
 .card-text {
-    flex: 1;
+    flex: 1; /* all elements take same size */
 }
 
 .card-img {
-    flex: 1;
+    flex: 1; /* all elements take same size */
 }
 
 .card-img img {
-    flex: 1;
+    flex: 1; /* all elements take same size */
     border-radius: 8px;
     width: 300px;
 }
   
 .card-video iframe {
     border-radius: 10px;
-    max-width: 100%;
+    max-width: 100%; /* maintains size when resized */
 }
   
 .info-card h3 {
@@ -204,11 +222,11 @@ body {
     font-size: 1.3em;
     color: #ddd;
     line-height: 1.8;
-    text-align: justify;
+    text-align: justify; /* text fills whole available space */
 }
 
 .info-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px); /* makes div pop up when hover */
     box-shadow: 0 8px 20px rgba(88, 65, 41, 0.7);
     background-color: #3a3a3a;
 }
@@ -219,7 +237,6 @@ body {
     font-size: 1.3em;
 }
 
-
 .text h1 {
     color: #eb7c05;
 }
@@ -227,7 +244,7 @@ body {
 .text iframe {
     width: 100%;
     max-width: 600px;
-    border: none;
+    border: none; 
     margin-top: 20px;
     border-radius: 8px;
     background-color: #2c2c2c;
@@ -268,7 +285,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit:cover;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s; /* when hover image opacity lowered to show text */
 }
 
 .spice-card:hover {
@@ -369,7 +386,7 @@ body {
 .dish img {
     width: 200px;
     height: 200px;
-    object-fit: cover;
+    object-fit: cover; /*ensures image is not stretched*/
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -432,6 +449,7 @@ footer {
 
 /*responsive mobile design*/
 @media (max-width: 500px) {
+    /*ressetting padding and margins that we put for the right aligned nav*/
     .container {
         padding: 0px;
     }
@@ -442,9 +460,19 @@ footer {
         flex-direction: column;
         padding: 0px;
     }
+    /*removing desktop nav*/
     .nav {
         display: none;
     }
+    /*showing hamburger nav*/
+    .nav-mobile {
+        display: flex;
+    }
+    .nav-mobile a {
+        font-size: 1em;
+        padding: 5px;
+    }  
+    /*making font sizes smaller*/  
     .head {
         height: 300px;
         padding-right: 0;
@@ -481,8 +509,76 @@ footer {
     .text h1 {
         font-size: 1.25em;
     }
+    /*spice grid into column so user can see them all*/
     .spices-grid {
         flex-direction: column;
+    }    
+}
+
+/*responsive tablet design*/
+@media (max-width: 900px) and (min-width: 501px) { 
+    /*ressetting padding and margins that we put for the right aligned nav*/
+    .container {
+        padding: 0px;
     }
-    
+    .content-wrapper {
+        padding: 0px;
+    }
+    .content-wrapper2 {
+        flex-direction: column;
+        padding: 0px;
+    }
+    /*removing desktop nav and showing mobile nav*/
+    .nav {
+        display: none;
+    }
+    .nav-mobile {
+        display: flex;
+    }
+    .nav-mobile a {
+        font-size: 1.5em;
+        padding: 5px;
+    } 
+    /*font size changing*/   
+    .head {
+        height: 300px;
+        padding-right: 0;
+    }
+    .head h2 {
+        font-size: 2.5em;
+    }
+    .head p {
+        font-size: 1.5em;
+    }
+    .content {
+        margin-right: 0;
+    }
+    .history p {
+        font-size: 1em;
+    }
+    .history h1 {
+        font-size: 1.25em;
+    }
+    .history img {
+        width: 150px;
+    }
+    .info-card {
+        margin-top: 15px;
+    }
+    .card-text p {
+        font-size: 1em;
+    }
+    .text {
+        margin: 0px;
+        font-size: 1em;
+        padding: 0px;
+    }
+    .text h1 {
+        font-size: 1.25em;
+    }
+    /*spice grid into row in the middle for better view*/
+    .spices-grid {
+        flex-direction: row;
+        justify-content: center;
+    }    
 }
