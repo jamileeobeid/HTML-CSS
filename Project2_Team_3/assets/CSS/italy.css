@@ -6,29 +6,83 @@
 
 /*-------------------------THE BELOW CODES ARE DEDICATED FOR THE ITALY PAGE (italy.html)-------------------------*/
 
-*{
+
+/* LEGEND: */
+/* GENERAL - setting applied to the whole page */
+/* NAVBAR - settings applied to the navigation bar */
+/* HEADER - settings applied to the header of page (main picture of Italy and header on it) */
+/* MAIN PAGE - serves the main content of the page */
+/* FOOTER - settings applied to the footer of the page */
+
+
+
+/* -------------------------------------------------------- DESKTOP --------------------------------------------------------*/
+/* -------------------------------------------------------- DESKTOP --------------------------------------------------------*/
+/* -------------------------------------------------------- DESKTOP --------------------------------------------------------*/
+
+
+
+/* -------------- GENERAL SETTINGS -------------- */
+/* \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ */
+
+/* Deletes margin and padding from body, sets default font-family and default font-size */
+*{ 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
-.flex{
+
+/* Makes the container flex*/
+.flex{ 
     display: flex;
     gap: 0;
 }
-.row{
+
+/* Makes flex container follow a row direction */
+.row{ 
     flex-direction: row;
 }
-.column{
+
+/* Makes flex container follow a column direction */
+.column{ 
     flex-direction: column;
 }
-h1{
+
+/* Sets the font size for h1 as 32 px (2 rem * 16 px) */
+h1{ 
     font-size: 2rem;
 }
-h2{
-    font-size: 1.5r ;
+
+/* Sets the font size for h1 as 24 px (1.5 rem * 16 px) */
+h2{ 
+    font-size: 1.5rem ;
 }
+
+/* Make all images take full width and adjust height according to image size */
+img{ 
+    width: 100%;
+    height: auto;
+}
+
+/* Hide mobile and tablet variations when website is used on Desktop*/
+.tablet_mobile{
+    display: none;
+}
+
+
+/* /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\  */
+/* -------------- GENERAL SETTINGS -------------- */
+
+
+/* ===============================================*/
+
+
+/* -------------- NAVBAR SETTINGS -------------- */
+/* \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ */
+
+/* Styles for links in navbar */
 .navbar a{
     line-height: 10vh;
     text-decoration: none;
@@ -42,10 +96,14 @@ h2{
     justify-content: center;
     color: white;
 }
-.navbar a:hover{
+
+/* Changes the opacity of navbar to 100% when users hovers the cursor */
+.navbar a:hover{ 
     background-color: darkred;
 }
-.navbar{
+
+/*  Creates darkred navbar with 0.65 opacity of 10vh height, sticked to the top of the page */
+.navbar{ 
     background-color: rgba(139, 0, 0, 0.65) ;
     position: sticky;
     top: 0;
@@ -54,7 +112,40 @@ h2{
     margin: 0;
     box-sizing: border-box;
 }
-.main-pic{
+
+/* Represents navbar as a list items */
+li{
+    display: block;
+}
+li a{
+    display: block;
+}
+
+/* Styles for tablet and mobile, works for navbar */
+summary{
+    cursor: pointer;
+    list-style: none; /*Removing the default arrow*/
+    font-size: 2.5rem;
+    text-align: center;
+}
+/* Set color to darkred and opacity to 100% when user hovers the mouse */
+summary:hover{
+    background-color: darkred;
+}
+
+
+/* /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\  */
+/* -------------- NAVBAR SETTINGS -------------- */
+
+
+/* ===============================================*/
+
+
+/* -------------- HEADER SETTINGS -------------- */
+/* \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ */
+
+/* Main picture of Italy on the top of the page */
+.main-pic{ 
     height: 90vh;
     max-width: none;
     overflow: hidden;
@@ -62,10 +153,46 @@ h2{
     padding: 0;
     box-sizing: border-box;
 }
-img{
-    width: 100%;
-    height: auto;
+
+/* Text "Italian Cuisine" over the image, with distance of 50px from the top of page, */
+/* size of 64 px (4 rem * 16 px) and white colored */
+.header h1{
+    position: absolute; 
+    top: 50px; 
+
+    /* Sets the header to the center of the picture */
+    left: 50%; 
+    transform: translateX(-50%);
+
+    color: white; 
+    font-size: 4rem; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    z-index: 2;
 }
+
+/* Remove any empty space from header */
+.header{
+    margin:0;
+    padding: 0;
+}
+
+/* /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\  */
+/* -------------- HEADER SETTINGS -------------- */
+
+
+/* ===============================================*/
+
+
+/* ------------- MAIN PAGE SETTINGS ------------- */
+/* \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ */
+
+/* Adds spacing of 10px around h2 in .content*/
+.content h2{
+    margin: 10px;
+}
+
+/* General settings for main content*/
 .content{
     width: 80%;
     font-family: Arial, Helvetica, sans-serif;
@@ -75,6 +202,8 @@ img{
     background-color: #F4F9FF;
     padding: 20px;
 }
+
+/* Makes 2 columns 3 rows grid with a gap of 10px */
 .grid{
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -83,18 +212,23 @@ img{
     color: black;
     margin-bottom: 70px;
 }
+/* Settings for p inside the grid */
 .grid p{
     background-color: #FFD700;
     padding: 10px;
     border-radius: 10px;
     margin: 0;
-    text-align: justify;
+    text-align: justify; /* Makes text equally aligned on both sides */
 }
+/* Changes color and size of paragraph when user hovers the mouse */
 .grid p:hover{
     background-color: #FFC107;
-    transform: scale(1.03);
-    transition: all 0.3s ease;
+    transform: scale(1.03); /* Size of p becomes 1.03x times bigger */
+    transition: all 0.3s ease; /* Creates an ease transition for 1x size to 1.03x size in 0.3 seconds */
 }
+
+/* General settings for any dish card */
+/* Makes sure that the content inside it does not overflow */
 .dish{
     background-color: darkred;
     width: fit-content;
@@ -103,12 +237,7 @@ img{
     padding: 0;
     position: relative;
 }
-.container{
-    flex-direction: row;
-}
-.container .dish{
-    color: #FFD700;
-}
+/* Settings for images inside dish cards */
 .dish img{
     width: 100%;
     align-self: center;
@@ -116,14 +245,120 @@ img{
     margin: 0;
     padding: 0;
 }
+
+/* Creates space after the carousel container */
+.carousel{
+    margin-bottom: 70px;
+}
+/* Styles for dishes in .carousel container */
+.carousel .dish{
+    padding: 10px;
+    border-radius: 50px;
+    flex: 1;
+    padding: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+/* Styles for images inside .dish containers, which are inside of the .carousel */
+.carousel .dish img{
+    width: 60%;
+    height: auto;
+}
+/* Aligns text to the center and changes its color */
+.carousel .dish {
+    text-align: center;
+    color: #F5F5DC;
+}
+/* Shows only the default dish card by default */
+#default{
+    display: flex;
+}
+/* Hides dish cards by default */
+#margarita, #lasagna, #fettucini{
+    display: none;
+}
+/* When a specific dish card is opened, makes it visible */
+#margarita:target, #lasagna:target, #fettucini:target{
+    display: flex;
+}
+/* When any specific dish card is open, hides the default one */
+.carousel div[id]:target ~ #default{
+    display: none;
+}
+/* Styles for arrows */
+.arrow{
+    background-color: lightgray;
+    flex: 1;
+    max-width: 3vw;
+    justify-content: center;
+    align-self: center;
+    border-radius: 10px;
+}
+
+
+/* Sets the direction of flex container as a row and creates 5px gap*/
+.container{
+    gap:5px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/* Styles for dish cards inside .container */ 
+.container .dish{
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    min-height: fit-content;
+    width: 80%;
+    height: auto;
+}
+/* Centers links inside .container .dish */
+.container .dish a{
+    justify-content: center;
+    align-items: center;
+    flex:1;
+    width: 100%;
+}
+/* Styles for the text above the dish for recipes */
+.text_above_dish{
+    position: absolute;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    width: fit-content; 
+    padding: 5px;
+}
+/* Size for p inside recipes cards*/
+.text_above_dish h3,p{
+    margin:0;
+    font-size: 1rem;
+}
+/* Set the opacity of text to 100% when user hovers the container */
+.container .dish a:hover .text_above_dish{
+    opacity: 1;
+}
+/* Set the opacity of background image to 60% when user hovers the container */
+.container .dish a:hover img {
+    opacity: 0.6;
+}
+
+
+
+/* Creates space on top and left of recommendations container */
 .recommendations{
     margin-top: 70px;
     margin-left: 80px;
-}
+} /* Creates space on top and left of paragraphs inside of the recommendations container */
 .recommendations p{
     margin-top: 20px;
     margin-bottom: 20px;
 }
+/* Settings for recommendation cards  */
 .recommendation{
     background-color: aliceblue;
     text-decoration: none;
@@ -134,16 +369,62 @@ img{
     border-radius: 20px;
     max-width: fit-content;
 }
+/* Changes color of recommendation card when user hovers the mouse */
+.recommendation:hover{
+    background-color: lightgray;
+    transition: all 0.3s ease;
+}
+/* Creates space for text inside the recommendation card*/
 .recommendation span{
     padding: 10px;
 }
+/* Settings for images inside the recommendation card */
 .recommendation img{
     width: 50%;
     border-radius: 20px;
     height: auto;
 }
+/* Removes border and background from the button and sets the cursor as pointer when user hovers */
+button{
+    border: none;
+    background: none;
+    cursor:pointer;
+}
+/* Creates spacing on the top and left of like_section */
+.like_section{
+    margin-top: 70px;
+    margin-left: 80px;
+}
+/* Styles for like button */
+.like{
+    animation: moveAndChangeColor 1s infinite; /* Creates an infinite animation of moving picture*/
+    width: 10%;
+    height: auto;
+}
+/* Animation that constantly moves the like picture */
+@keyframes moveAndChangeColor {
+0% {
+    transform: rotate(0deg); /* Initially (after 0s), there is no rotation*/
+}
+50% {
+    transform: rotate(-10deg); /* On the half of the animation (after 0.5 s), it rotates to -10 degrees */
+}
+100% {
+    transform: rotate(0deg); /* At the end (after 1s), it returns to the initial position */
+}
+}
 
-/* footer styles */
+
+
+/* Style for likes and views counters: aligns them to the right */
+.end{
+    text-align: right;                
+}
+
+
+/* -------------- FOOTER SETTINGS -------------- */
+/* \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ */
+
 footer {
     width: 100%;
     background-color: darkred;
@@ -187,160 +468,21 @@ footer {
     background-color: #b5e7a0;
     color: #023002;
 }
-.carousel{
-    margin-bottom: 70px;
-}
-.carousel .dish{
-    padding: 10px;
-    border-radius: 50px;
-    flex: 1;
-    padding: 20px;
-    margin-right: 10px;
-    margin-left: 10px;
-}
-.carousel .dish img{
-    width: 60%;
-    height: auto;
-}
-.carousel .dish {
-    text-align: center;
-    color: #F5F5DC;
-}
-.content h2{
-    margin: 10px;
-}
-.arrow{
-    background-color: lightgray;
-    flex: 1;
-    max-width: 3vw;
-    justify-content: center;
-    align-self: center;
-    border-radius: 10px;
-}
-#default{
-    display: flex;
-}
-#margarita, #lasagna, #fettucini{
-    display: none;
-}
-#margarita:target, #lasagna:target, #fettucini:target{
-    display: flex;
-}
-.carousel div[id]:target ~ #default{
-    display: none;
-}
-.recommendation{
-    min-height: fit-content;
-    width: 1000px;
-}
-.recommendation:hover{
-    background-color: lightgray;
-    transition: all 0.3s ease;
-}
 
-.container .dish{
-    border: 1px solid black;
-    justify-content: center;
-    align-items: center;
-    flex:1;
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
-}
-.container{
-    gap:5px;
-}
-.container .dish a{
-    justify-content: center;
-    align-items: center;
-    flex:1;
-}
-.like_section{
-    margin-top: 70px;
-    margin-left: 80px;
-}
-.like{
-    animation: moveAndChangeColor 1s infinite;
-    width: 10%;
-    height: auto;
-}
-@keyframes moveAndChangeColor {
-0% {
-    transform: rotate(0deg);
-}
-50% {
-    transform: rotate(-10deg);
-}
-100% {
-    transform: rotate(0deg);
-}
-}
-.end{
-    text-align: right;                
-}
-.text_above_dish{
-    position: absolute;
-    color: white;
-    opacity: 0;
-    transition: opacity 0.3s;
-    z-index: 2;
-    width: fit-content;
-    padding: 5px;
-}
-.text_above_dish h3,p{
-    margin:0;
-    font-size: 1rem;
-}
-.container .dish a:hover .text_above_dish{
-    opacity: 1;
-}
-.container .dish a:hover img {
-    opacity: 0.6;
-}
-.header h1{
-    position: absolute; 
-    top: 50px; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    color: white; 
-    font-size: 4rem; 
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-    z-index: 2;
-}
-.header{
-    margin:0;
-}
-button{
-    border: none;
-    background: none;
-    cursor:pointer;
-}
-.mobile{
-    display: none;
-}
-.tablet{
-    display: none;
-}
-li{
-    display: block;
-}
-li a{
-    display: block;
-}
-summary{
-    cursor: pointer;
-    list-style: none; /*removing the default arrow*/
-    font-size: 2.5rem;
-    text-align: center;
-}
-summary:hover{
-    background-color: darkred;
-}
-/*---------------------------------------------RESPONSIVENESS-----------------------------------------------*/
+/* /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\  */
+/* -------------- FOOTER SETTINGS -------------- */
+
+
+
+/* -------------------------------------------------------- MOBILE --------------------------------------------------------*/
+/* -------------------------------------------------------- MOBILE --------------------------------------------------------*/
+/* -------------------------------------------------------- MOBILE --------------------------------------------------------*/
 
 /* MOBILE VIEW RESPONSIVENESS */
 @media (max-width: 500px) {
+    /* -------------- GENERAL SETTINGS -------------- */
+    /* \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ */
+
     .desktop{
         display: none;
     }
@@ -350,11 +492,44 @@ summary:hover{
     .mobile{
         display: block;
     }
+
+    /* /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\  */
+    /* -------------- GENERAL SETTINGS -------------- */
+
+
+    /* ===============================================*/
+
+
+    /* -------------- NAVBAR & HEADER SETTINGS -------------- */
+    /* \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ */
+
     .navbar{
         height: fit-content;
         text-align: center;
         justify-content: center;
     }
+
+    .main-pic{
+        width:100%;
+        height: auto;
+    }
+
+    .header h1{
+        font-size: 3rem;
+        width:100%;
+        text-align: center;
+    }
+
+    /* /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\  */
+    /* ---------- NAVBAR & HEADER SETTINGS ---------- */
+
+
+    /* ===============================================*/
+
+
+    /* -------------- CAROUSEL SETTINGS -------------- */
+    /* \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ */   
+
     .carousel .flex{
         flex-direction: column;
     }
@@ -373,42 +548,168 @@ summary:hover{
         margin-right: 10px;
         margin-left: 10px;
     }
+
+    /* /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\  */
+    /* -------------- CAROUSEL SETTINGS -------------- */
+
+
+    /* ===============================================*/
+
+
+    /* -------------- CAROUSEL SETTINGS -------------- */
+    /* \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ */   
+
+    /* Sets direction of flex container as column and adds space before the .recommendation */
     .recommendation{
         flex-direction: column;
         margin: 0;
         margin-top: 1rem;
     }
+
     .recommendations p {
-        margin: 0;
+        margin: 0; /* Removes space around */
     }
     .recommendations{
-        margin: 0;
+        margin: 0; /* Removes space around */
     }
+
     .recommendation img{
-        width: 100%;
+        width: 100%; /* Image takes full width of parent container */
     }
     .like_section{
-        margin-left: 0;
+        margin-left: 0; /* Removes space on the left*/
     }
+    /* Transforms the grid. It will have elements in 1 column */
     .grid{
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
+    /* Transforms the container to column */
     .container{
         flex-direction: column;
     }
+    /* Sets the width to 30% of parent width */
+    .like{
+        width: 30%;
+    }
+}
+
+
+
+/* -------------------------------------------------------- TABLET --------------------------------------------------------*/
+/* -------------------------------------------------------- TABLET --------------------------------------------------------*/
+/* -------------------------------------------------------- TABLET --------------------------------------------------------*/
+  
+/* MOBILE VIEW RESPONSIVENESS */
+@media (max-width: 1270px) and (min-width: 501px) {
+
+        /* -------------- GENERAL SETTINGS -------------- */
+    /* \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ */
+
+    .desktop{
+        display: none;
+    }
+    .tablet_mobile{
+        display: block;
+    }
+
+    /* /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\  */
+    /* -------------- GENERAL SETTINGS -------------- */
+
+
+    /* ===============================================*/
+
+
+    /* -------------- NAVBAR & HEADER SETTINGS -------------- */
+    /* \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ */
+
+    .navbar{
+        height: fit-content;
+        text-align: center;
+        justify-content: center;
+    }
+
     .main-pic{
         width:100%;
         height: auto;
     }
+
     .header h1{
         font-size: 3rem;
         width:100%;
         text-align: center;
     }
+
+    /* /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\  */
+    /* ---------- NAVBAR & HEADER SETTINGS ---------- */
+
+
+    /* ===============================================*/
+
+
+    /* -------------- CAROUSEL SETTINGS -------------- */
+    /* \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ */   
+
+    .carousel .flex{
+        flex-direction: column;
+    }
+    .arrow{
+        max-width: fit-content;
+    }
+    .arrow img{
+        width: 60px;
+        height: 50px;
+    }
+    .carousel .dish{
+        padding: 10px;
+        border-radius: 50px;
+        flex: 1;
+        padding: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    /* /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\  */
+    /* -------------- CAROUSEL SETTINGS -------------- */
+
+
+    /* ===============================================*/
+
+
+    /* -------------- CAROUSEL SETTINGS -------------- */
+    /* \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ */   
+
+    /* Sets direction of flex container as column and adds space before the .recommendation */
+    .recommendation{
+        flex-direction: column;
+        margin: 0;
+        margin-top: 1rem;
+    }
+
+    .recommendations p {
+        margin: 0; /* Removes space around */
+    }
+    .recommendations{
+        margin: 0; /* Removes space around */
+    }
+
+    .recommendation img{
+        width: 100%; /* Image takes full width of parent container */
+    }
+    .like_section{
+        margin-left: 0; /* Removes space on the left*/
+    }
+    /* Transforms the grid. It will have elements in 1 column */
+    .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    /* Transforms the container to column */
+    .container{
+        flex-direction: column;
+    }
+    /* Sets the width to 30% of parent width */
+    .like{
+        width: 30%;
+    }
 }
-
-  /* TABLET VIEW RESPONSIVENESS */
-  @media (max-width: 900px) and (min-width: 501px) {
-
-  }
