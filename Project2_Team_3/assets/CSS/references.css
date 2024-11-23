@@ -27,7 +27,7 @@ body {
     padding: 20px;
     font-size: 1.5em;
 }
-.nav a {
+.nav a, .nav-mobile a{
     display:inline-block ;
     color: white;
     text-decoration: none;
@@ -35,8 +35,31 @@ body {
     border-radius: 8px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
+.nav-mobile {
+    display: none;
+    background-color: #333;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5em;
+}
+.nav-mobile summary {
+    list-style-type: none; /* removes default arrow */
+    font-size: 1.5em;
+    cursor:pointer; /* makes cursor a pointer so user knows its clickable*/
+    text-align: center;
+    color: white;
+}
+.nav-mobile ul {
+    list-style-type: none;
+    text-align: center;
+}
+.nav-mobile li {
+    color: white;
+    padding: 5px;
+    font-size: 1em;
+}
 
-.nav a:hover  {
+.nav a:hover, .nav-mobile a:hover  {
     background-color: #555;
     transform: scale(1.1);
 }
@@ -167,4 +190,13 @@ body {
     background-color: grey;
     font-size: 0.9rem;
     color: black;
+}
+
+@media (max-width: 500px) {
+    .nav {
+        display: none;
+    }
+    .nav-mobile {
+        display: block;
+    }
 }
