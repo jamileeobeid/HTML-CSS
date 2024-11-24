@@ -301,7 +301,7 @@ summary:hover{
 /* Sets the direction of flex container as a row and creates 5px gap*/
 .container{
     gap:5px;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -315,7 +315,7 @@ summary:hover{
     flex-direction: column;
     padding: 5px;
     min-height: fit-content;
-    width: 80%;
+    width: 50%;
     height: auto;
 }
 /* Centers links inside .container .dish */
