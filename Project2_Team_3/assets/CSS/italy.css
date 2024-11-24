@@ -554,9 +554,6 @@ footer {
     /* ===============================================*/
 
 
-    /* -------------- CAROUSEL SETTINGS -------------- */
-    /* \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ */   
-
     /* Sets direction of flex container as column and adds space before the .recommendation */
     .recommendation{
         flex-direction: column;
@@ -618,7 +615,7 @@ footer {
     /* ===============================================*/
 
 
-    /* -------------- NAVBAR & HEADER SETTINGS -------------- */
+    /* ------------ NAVBAR & HEADER SETTINGS ------------ */
     /* \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ */
 
     .navbar{
@@ -672,10 +669,7 @@ footer {
 
 
     /* ===============================================*/
-
-
-    /* -------------- CAROUSEL SETTINGS -------------- */
-    /* \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ */   
+  
 
     /* Sets direction of flex container as column and adds space before the .recommendation */
     .recommendation{
