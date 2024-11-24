@@ -486,12 +486,10 @@ footer {
     .desktop{
         display: none;
     }
-    .tablet{
+    .tablet_mobile{
         display: block;
     }
-    .mobile{
-        display: block;
-    }
+
 
     /* /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\  */
     /* -------------- GENERAL SETTINGS -------------- */
