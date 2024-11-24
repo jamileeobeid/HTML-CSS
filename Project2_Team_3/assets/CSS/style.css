@@ -180,8 +180,10 @@ nav ul li a:hover {
     font-size: 1.2em;
     border-radius: 5px;
     margin-bottom: 10px;
-    text-decoration: none;
+    text-decoration: none; /* removing the default underline from the links*/
     background-color: rgba(240, 240, 240, 0.8);
+    /* applying a smooth transition effect to both the background color and the transform property. 
+    The changes will take 0.3 seconds and use an 'ease' timing function for a gradual transition. */
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -214,19 +216,26 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-/*styling for paragraphs inside country sections */ 
+/*-------- styling for paragraphs inside country sections ----------  */ 
+
+/* Initially hiding the elements with IDs: brazil, ethiopia, germany, jordan, kazakhstan, and spain 
+   within the .main-content container */
+
 .main-content #brazil, 
 .main-content #ethiopia, 
 .main-content #germany, 
 .main-content #jordan, 
 .main-content #kazakhstan, 
 .main-content #spain {
-    display: none;
+    display: none;  /*hiding the elements by default*/
     font-size: 1.2em;
     color: #070707;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /*adding space below the element*/
     line-height: 1.6;
 }
+
+/* When any of the elements (brazil, ethiopia, germany, jordan, kazakhstan, spain) are targeted by 
+   a URL fragment (e.g., #brazil), they become visible (display: block). */
 
 #brazil:target, 
 #ethiopia:target, 
@@ -234,25 +243,27 @@ nav ul li a:hover {
 #jordan:target, 
 #kazakhstan:target, 
 #spain:target {
-    display: block;
+    display: block; /*making the targeted element visible */
 }
 
 /*styling the default map image (beside "Popular Dishes of Every Country") */
 .main-content #default {
-    display: block;
+    display: block; /* ensuring the default image is visible by default */
     text-align: center;
-    margin-top: 20px;
+    margin-top: 20px; /* adding space above the image */
 }
+
 /*adjusting the image*/
 .default-image {
     width: 80%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 8px; /* rounding the corners of the image */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /*adding a shadow for the images*/
 }
-/*ensuring any targeted country will hide Brazil */
+
+/* Ensuring any targeted country will hide the default map image */
 .main-content div[id]:target ~ #default {
-    display: none;
+    display: none; /* Hides the default image when a country is targeted */
 }
 
 /*BELOW CODES ARE FOR COUNTRIES & INGREDIENTS*/
