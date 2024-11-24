@@ -449,6 +449,9 @@ footer {
     color: #f1f1f1;
     line-height: 1.5;
 }
+.footer-contact {
+    margin-left: 1rem;
+}
 .footer-contact p {
     font-size: 1rem;
     margin: 0.3rem 0;
