@@ -15,6 +15,9 @@
     transition: all 0.3s ease;
     scroll-behavior:smooth;
 }
+
+/* --------------------------------------- NAVIGATION BAR ---------------------------------------*/
+
 /* Style for Japan-specific navigation on the left side */
 nav {
     position: fixed;
@@ -147,7 +150,10 @@ nav {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-/*DISTRICT SECTION*/
+
+
+/* --------------------------------------- DISTRICT SECTION ---------------------------------------*/
+
 .fine-dining-japan {
     padding: 40px;
     background-color: rgba(240, 240, 240, 0.9);
@@ -206,7 +212,10 @@ nav {
 .city-container a:hover {
     text-decoration: underline;
 }
-/*SUSHI SECTION STYLING*/
+
+
+/* --------------------------------------- SUSHI SECTION ---------------------------------------*/
+
 .sushi-section {
     padding: 40px;
     background-color: rgba(240, 240, 240, 0.9);
@@ -214,6 +223,7 @@ nav {
     max-width: 90%;
     border-radius: 10px; /*for rounded corners*/
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /*adding margins to adjust the section placement*/
     margin-left: 18%;
     margin-right: 4%;
     margin-bottom: 5%;
@@ -247,12 +257,15 @@ nav {
 .sushi-section a:hover {
     text-decoration: underline;
 }
-/*HIROSHIMA SECTION*/
+
+
+/* --------------------------------------- HIROSHIMA SECTION ---------------------------------------*/
+
 #hiroshima-food-guide {
     margin: 50px auto;
     padding: 20px;
     background-color: #f5f5f5;
-    border-radius: 10px;
+    border-radius: 10px; /*adding rounded corners*/
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     max-width: 1200px;
     font-family: 'Arial', sans-serif;
@@ -311,7 +324,9 @@ nav {
     text-align: justify; /*justifying the text to be spread evenly across the container */
     line-height: 1.6;
 }  
-/*MATCHA CSS*/
+
+
+/* --------------------------------------- MATCHA SECTION ---------------------------------------*/
 #matcha {
   background-color: #f7faf6;
   padding: 50px;
@@ -367,8 +382,12 @@ nav {
 }
 .matcha-img-2 {
   max-height: 250px;
+  /*ensuring the image covers the entire container, cropping it if necessary to fit */
   object-fit: cover;
 }
+
+/* --------------------------------------- FISHING SECTION ---------------------------------------*/
+
 #fishing {
     background-color: #f7faf6;
     padding: 50px;
@@ -376,7 +395,7 @@ nav {
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /*placing the content side-to-side*/
     justify-content: space-between;
     align-items: center;
     font-family: 'Arial', sans-serif;
@@ -409,9 +428,10 @@ nav {
 .fishing-img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    border-radius: 10px; /* adding round corners for the element with a radius of 10px */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* adding a subtle shadow below the element for a 3D effect */
+    transition: transform 0.3s ease-in-out; /* Smoothly animates transformations over 0.3 seconds with an ease-in-out effect */
+
 }
 .fishing-img:hover {
     transform: scale(1.1); /* Gentle zoom effect on hover */
@@ -461,9 +481,17 @@ footer {
     background-color: lightcoral;
     color: rgba(139, 0, 0, 0.658);
 }
-/*---------------------------------------------RESPONSIVENESS-----------------------------------------------*/
 
-/* MOBILE VIEW RESPONSIVENESS */
+
+
+
+/*----------------------////////----------------------- RESPONSIVENESS- ----------------------////////------------------------*/
+
+
+
+
+/*--------------------------------------------- MOBILE VIEW RESPONSIVENESS --------------------------------------------- */
+
 @media (max-width: 500px) {
 
     /*showing the hamburger icon when screen is Mobile*/
@@ -619,10 +647,11 @@ footer {
     nav.nav-japan:nth-of-type(2) {
       display: none;
     }
-  }
+}
 
-  /* TABLET VIEW RESPONSIVENESS */
-  @media (max-width: 900px) and (min-width: 501px) {
+/*--------------------------------------------- TABLET VIEW RESPONSIVENESS ---------------------------------------------*/
+
+@media (max-width: 900px) and (min-width: 501px) {
 
     /* Showing the hamburger icon when screen is Tablet */
     nav.nav-japan details {
@@ -648,15 +677,15 @@ footer {
       color: darkred;
     }
     nav.nav-japan {
-      position: relative;
+      position: relative; /* Positions the element relative to its normal position */
       width: 100%;
       height: auto;
       background-color: rgba(139, 0, 0, 0.863);
       padding: 10px 0;
-      box-shadow: none;
-      border-radius: 0;
+      box-shadow: none; /* Removes any shadow effect from the element */
+      border-radius: 0; /* Ensures the corners of the element are not rounded */
       margin-top: 250px;
-    }
+    }  
     /* Adding the details and summary for the collapsible menu */
     nav.nav-japan details {
       display: block;
@@ -719,14 +748,13 @@ footer {
     }
     #matcha,
     #fishing {
-      display: flex;
-      flex-direction: column-reverse;
+      display: flex; 
+      flex-direction: column-reverse; /* reversing the order of child elements so the last one appears first */
       margin: 20px auto;
-      max-width: 95%;
-      padding: 0px;
-      margin-left: 0%;
-      max-width: 100%;
-    }
+      padding: 0px; /* Removes any padding inside the element */
+      margin-left: 0%; 
+      max-width: 100%; /* ensuring the element takes up the full width of its parent */
+  }  
     #matcha p,
     #fishing p {
       width: 100%;
@@ -745,7 +773,7 @@ footer {
     .sushi-section p {
       font-size: 1.2rem;
       line-height: 1.4;
-      text-align: justify;
+      text-align: justify; /* Aligns text so that it is evenly distributed across the width of the container */
       margin: 0;
       padding: 0;
     }
@@ -765,7 +793,7 @@ footer {
       margin: 20px 0;
       padding: 15px;
       font-size: 0.9rem;
-      width: 100vw;
+      width: 100vw; /* Sets the element's width to 100% of the viewport's width (1vw equals 1% of the viewport width) */
     }
     .footer-container > div {
       margin-bottom: 15px;
@@ -773,8 +801,7 @@ footer {
     .footer-bottom {
       font-size: 0.8rem;
     }
-    /* Hiding the second nav for tablet */
     nav.nav-japan:nth-of-type(2) {
-      display: none;
-    }
-  }
+      display: none; /* Hides the second <nav> element with the class "nav-japan" */
+  }  
+}

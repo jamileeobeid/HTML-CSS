@@ -92,7 +92,7 @@ body {
 /* header styling */
 .head {
     position: relative;
-    background-image: url('/assets/media/spices.jpg'); /*bg image for the header */
+    background-image: url('/assets/media/india/spices.jpg'); /*bg image for the header */
     background-size: cover;
     background-position: center;
     height: 100vh;
