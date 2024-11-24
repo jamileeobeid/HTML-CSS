@@ -51,7 +51,7 @@ body {
     color: white;
 }
 .nav-mobile ul {
-    list-style-type: none;
+    list-style-type: none; /* removes default bullet points */
     text-align: center;
 }
 .nav-mobile li {
@@ -62,7 +62,7 @@ body {
 
 .nav a:hover, .nav-mobile a:hover  {
     background-color: #555;
-    transform: scale(1.1);
+    transform: scale(1.1); /* size increase when hover */
 }
 
 /* Header styles */
@@ -106,10 +106,10 @@ body {
     letter-spacing: 1px;
     font-weight: bold;
 }
-
+/* Using grid to display references*/
 .references-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* autofit for responsiveness */
     gap: 1.5rem;
     margin-top: 2rem;
 }
@@ -138,6 +138,7 @@ body {
     color: #555;
 }
 
+/* view link button */
 .reference-item .view-details {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -193,6 +194,7 @@ body {
     color: black;
 }
 
+/* hamburger menu for mobile */
 @media (max-width: 500px) {
     .nav {
         display: none;
