@@ -31,7 +31,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 22px;
 }
 
 /* Makes the container flex*/
@@ -64,7 +64,6 @@ h2{
 img{ 
     width: 100%;
     height: auto;
-    margin: 0;
 }
 
 /* Hide mobile and tablet variations when website is used on Desktop*/
@@ -96,7 +95,6 @@ img{
     text-align: center;
     justify-content: center;
     color: white;
-    margin: 0;
 }
 
 /* Changes the opacity of navbar to 100% when users hovers the cursor */
@@ -265,6 +263,8 @@ summary:hover{
 .carousel .dish img{
     width: 60%;
     height: auto;
+    margin-bottom: 22px;
+    margin-top: 22px;
 }
 /* Aligns text to the center and changes its color */
 .carousel .dish {
